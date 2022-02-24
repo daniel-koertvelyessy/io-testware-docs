@@ -1,2 +1,0 @@
-/img/<gif_standorte_neu-anlegen.gif>
-![Standort anlegen](/img/gif_standorte_neu-anlegen.gif "<Neuen Standort anlegen>")
