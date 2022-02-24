@@ -25,3 +25,8 @@ return [
     'navigation' => require_once('navigation.php'),
 ];
 ```
+
+### Beispiel für Bild einfügen
+
+`![Standort anlegen](/img/gif_standorte_neu-anlegen.gif "<Neuen Standort anlegen>")`
+![Stabdort anlegen](/source/docs/img/PruefPlanAnlegen.gif "Neuen Standoert anlegen")
