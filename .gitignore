@@ -1,13 +1,6 @@
-/build_local/
-/cache/
+/build_*/
 /node_modules/
 /vendor/
-/.idea/
-/.vscode/
+/source/assets/build/
+.env
 npm-debug.log
-.idea/
-
-# Optional ignores
-# /build_staging/
-# /build_production/
-# /source/assets/build/

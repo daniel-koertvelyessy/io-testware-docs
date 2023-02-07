@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="85a35ecb-53c6-4d58-b74b-4835c1f3409a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/io-testware-docs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listeners/GenerateSitemap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/navigation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/404.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_assets/js/components/Callbackform.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_assets/js/components/Contactform.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_assets/js/components/Contactsupport.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_assets/js/components/Requestdemo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_assets/js/components/Search.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_assets/sass/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_assets/sass/_documentation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_assets/sass/_navigation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_assets/sass/_search.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_assets/sass/main.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_layouts/documentation.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_layouts/master.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_nav/menu-item.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_nav/menu-toggle.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_nav/menu.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_nav/search-input.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/apple-touch-icon-114x114.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/apple-touch-icon-120x120.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/apple-touch-icon-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/apple-touch-icon-152x152.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/apple-touch-icon-180x180.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/apple-touch-icon-57x57.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/apple-touch-icon-60x60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/apple-touch-icon-72x72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/apple-touch-icon-76x76.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/assets/img/docsearch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/assets/img/icon-stack.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/assets/img/icon-terminal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/assets/img/icon-window.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/assets/img/logo-large.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/assets/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/assets/img/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/assets/img/magnifying-glass.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/browserconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/docs/algolia-docsearch.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/docs/api-main.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/docs/custom-404-page.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/docs/customizing-your-site.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/docs/getting-started.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/docs/navigation.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/mstile-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/mstile-150x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/mstile-310x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/mstile-310x310.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/mstile-70x70.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/site.webmanifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Animation.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.production.php" beforeDir="false" afterPath="$PROJECT_DIR$/config.production.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/Standorte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/_assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/_layouts/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/build/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/build/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/build/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/build/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/build/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/build/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/docs/example.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/docs/img/Bildschirmfoto 2022-02-24 um 21.21.53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/docs/img/PruefPlanAnlegen.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/mnapoli/front-yaml" />
+      <path value="$PROJECT_DIR$/vendor/michelf/php-markdown" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/tightenco/jigsaw" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/events" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/view" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/vendor/_laravel_idea" />
+      <path value="$PROJECT_DIR$/vendor/samdark/sitemap" />
+      <path value="$PROJECT_DIR$/vendor/spatie/ignition" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-ignition" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/spatie/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/spatie/backtrace" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/console" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/pipeline" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/bus" />
+      <path value="$PROJECT_DIR$/vendor/illuminate/conditionable" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/termwind" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="25EywBogSjeolXm6KcQfJmJlSdX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "true",
+    "last_opened_file_path": "/Users/daniel.kortvelyessy/dev/io-testware-docs/source/_assets/js",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source/_assets/js" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="85a35ecb-53c6-4d58-b74b-4835c1f3409a" name="Changes" comment="" />
+      <created>1645106778181</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645106778181</updated>
+      <workItem from="1645106780992" duration="14499000" />
+      <workItem from="1645181033784" duration="2999000" />
+      <workItem from="1645356171370" duration="601000" />
+      <workItem from="1645734535444" duration="746000" />
+      <workItem from="1645735405269" duration="598000" />
+      <workItem from="1645774874742" duration="596000" />
+      <workItem from="1645808951955" duration="597000" />
+      <workItem from="1645901100624" duration="602000" />
+      <workItem from="1645953378472" duration="598000" />
+      <workItem from="1675415200462" duration="2167000" />
+      <workItem from="1675781910355" duration="5372000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
