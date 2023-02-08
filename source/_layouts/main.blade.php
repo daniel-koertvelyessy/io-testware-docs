@@ -78,7 +78,7 @@
 >
 <div id="app"
      x-data="{ showResonsiveMenu: false, showsubmen: false, shrinkNav: false }"
-     x-on:scroll.window="shrinkNav = window.pageYOffset > 95"
+     x-on:scroll.window="shrinkNav = window.pageYOffset > 105"
 >
     <header class="flex items-center shadow bg-white border-b h-24 mb-8 py-4"
             role="banner"
@@ -105,7 +105,7 @@
         @yield('body')
     </main>
 
-    <nav class="fixed bottom-6 right-2" x-show="shrinkNav">
+    <nav class="fixed bottom-6 right-4 bg-main-50 rounded px-2 py-1" x-show="shrinkNav">
         <a href="#top">top</a>
     </nav>
     <footer class=""

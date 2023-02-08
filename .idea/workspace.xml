@@ -5,60 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a35ecb-53c6-4d58-b74b-4835c1f3409a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_assets/js/components/copycode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icon-header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icons/book.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icons/box.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icons/boxes.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icons/code.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icons/envelope.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icons/exclamation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icons/fax.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icons/feather.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icons/git.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icons/headset.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icons/industry.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icons/phone.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icons/swatch.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/icons/users.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/logo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_components/toggle.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_layouts/ui-less.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/docs/general-ui.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/docs/installation-docker.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/docs/installation-lapp.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/docs/installation-main.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/blade.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blade.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/io-testware-docs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/io-testware-docs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/docs/getting-started.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/404.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/404.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/_assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_assets/sass/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/_assets/sass/_base.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_assets/sass/_navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/_assets/sass/_navigation.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_assets/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/_assets/sass/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_layouts/documentation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/_layouts/documentation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/_layouts/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_layouts/master.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_nav/menu-toggle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/_nav/menu-toggle.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/assets/build/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/build/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/assets/build/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/build/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/assets/build/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/build/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/assets/img/Screen_Overview_Sections.png" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/img/screenshots/Screen_Overview_Sections.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/assets/img/Screen_Portal_Guest.png" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/img/screenshots/Screen_Portal_Guest.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/assets/img/Screen_Portal_SuperUser.png" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/img/screenshots/Screen_Portal_SuperUser.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/assets/img/Screen_Portal_User.png" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/img/screenshots/Screen_Portal_User.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/assets/img/Screens_Dashboard.png" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/img/screenshots/Screens_Dashboard.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/assets/img/docsearch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/assets/img/icon-stack.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/assets/img/icon-terminal.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/assets/img/icon-window.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/assets/img/logo-large.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/assets/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/assets/img/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/docs/getting-started.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,18 +109,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "true",
-    "last_opened_file_path": "/Users/daniel.kortvelyessy/dev/io-testware-docs/source/docs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/daniel.kortvelyessy/dev/io-testware-docs/source/docs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/source/docs" />
@@ -194,6 +151,7 @@
       <workItem from="1675415200462" duration="2167000" />
       <workItem from="1675781910355" duration="6083000" />
       <workItem from="1675793606316" duration="13174000" />
+      <workItem from="1675846919495" duration="81000" />
     </task>
     <servers />
   </component>
