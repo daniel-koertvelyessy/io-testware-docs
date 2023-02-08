@@ -41,7 +41,7 @@ git clone https://github.com/daniel-koertvelyessy/testware.git
 
 After installing your desired system, you should create a database and super-user and add the data into the .env file
 
-```
+```docker
 DB_CONNECTION=pgsql
 DB_HOST= [IP-adress-of-your-databse-server]
 DB_PORT=5432
@@ -52,7 +52,7 @@ DB_PASSWORD=[passworrd]
 
 #### Optional step 3: setup e-mail connection (optional)
 
-```
+```docker
 MAIL_MAILER=smtp
 MAIL_HOST=[smpt.provider-address.com]
 MAIL_PORT=[587]
@@ -69,6 +69,6 @@ MAIL_FROM_NAME="${APP_NAME}"
 ## Run testware artisan installer
 Within your project folder run the testWare installer [command](#testware-commands).
 
-```php
+```bash
 php artisan testware:install
 ```

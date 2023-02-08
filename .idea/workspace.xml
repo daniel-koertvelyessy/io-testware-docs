@@ -5,17 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a35ecb-53c6-4d58-b74b-4835c1f3409a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/source/docs/getting-started.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/_assets/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/_assets/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_assets/sass/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/_assets/sass/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_assets/sass/_navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/_assets/sass/_navigation.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_assets/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/_assets/sass/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/_layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/_layouts/main.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/assets/build/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/build/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/assets/build/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/build/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/assets/build/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/build/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/docs/getting-started.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/docs/getting-started.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/source/docs/getting-started.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/docs/installation-lapp.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/docs/installation-lapp.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +155,7 @@
       <workItem from="1675415200462" duration="2167000" />
       <workItem from="1675781910355" duration="6083000" />
       <workItem from="1675793606316" duration="13174000" />
-      <workItem from="1675846919495" duration="81000" />
+      <workItem from="1675846919495" duration="7038000" />
     </task>
     <servers />
   </component>

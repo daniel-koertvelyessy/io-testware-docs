@@ -25,6 +25,9 @@ reading-time: ~ 5min
         <p class="mb-0">Die Abbildungen in dieser Dokumentation können sich in Form und Farbe von der Darstellung in Ihrem Profil unterscheiden.</p> https://www.json.org/json-de.html
     </div>
 
+    <pre><code class="language-bash">php artisan testware:install</code></pre>
+
+
     <p>In der Verwaltung werden folgende Module gepflegt:</p>
     <ul>
         <li>Standorte</li>
@@ -35,5 +38,32 @@ reading-time: ~ 5min
         <li>Verordnungen</li>
         <li>Anforderungen</li>
     </ul>
+
+<pre><code class="language-docker line-numbers text-xs">
+DB_CONNECTION = pgsql
+DB_HOST = [IP-adress-of-your-databse-server]
+DB_PORT=5432
+DB_DATABASE=[laravel]
+DB_USERNAME=[root]
+DB_PASSWORD=[password]
+</code></pre>
+
+
+    <pre><code class="language-json">
+[
+    {
+        "id": 1,
+        "created": "2020-12-29 11:30:16",
+        "updated": "2021-01-03 19:10:04",
+        "uid": "784f64bc-735a-3d2f-8a06-fcf3d47621f3",
+        "name": "HQbln153",
+        "label": "bln153",
+        "description": "Hauptsitz der Firma Testfirma GmbH",
+        "address_id": 2,
+        "employee_id": 4
+    },
+    {...}
+]
+        </code></pre>
 
 @endsection

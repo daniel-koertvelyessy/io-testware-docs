@@ -765,23 +765,7 @@ blockquote {
 }
 
 code {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  font-size: .925rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(212 212 212 / var(--tw-bg-opacity));
-  border-radius: 0.25rem;
-}
-
-code.hljs {
-  padding: 0px;
-  background-color: transparent;
-}
-code.hljs .hljs-comment, code.hljs .hljs-keyword, code.hljs .hljs-meta {
-  font-weight: 400;
-  font-style: normal;
+  font-size: .8rem;
 }
 
 h1,
@@ -877,34 +861,29 @@ p {
   }
 }
 
-pre {
-  padding: 1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-size: .8rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(64 64 64 / var(--tw-bg-opacity));
-  line-height: 1.75;
-  border-radius: 0.25rem;
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  overflow-x: auto;
-}
-pre code {
-  position: relative;
-  display: block;
-  padding: 0px;
-  background-color: transparent;
-}
+/*pre {
+    @apply p-4;
+    @apply my-6;
+    @apply text-xs;
+    @apply bg-slate-700;
+    @apply leading-loose;
+    @apply rounded;
+    @apply shadow;
+    @apply overflow-x-auto;
 
+    & code {
+        @apply relative;
+        @apply block;
+        @apply p-0;
+        @apply bg-transparent;
+    }
+}*/
 ::-moz-selection {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(212 218 98 / var(--tw-bg-opacity));
 }
-
 ::selection {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1571,12 +1550,12 @@ label {
   overflow-wrap: break-word;
 }
 
-.rounded {
-  border-radius: 0.25rem;
-}
-
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .rounded-md {
@@ -1851,6 +1830,10 @@ label {
   text-transform: capitalize;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .leading-none {
   line-height: 1;
 }
@@ -1881,6 +1864,11 @@ label {
 .text-slate-800 {
   --tw-text-opacity: 1;
   color: rgb(38 38 38 / var(--tw-text-opacity));
+}
+
+.text-main-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 250 204 / var(--tw-text-opacity));
 }
 
 .text-slate-50 {

@@ -1,0 +1,28 @@
+{
+  "plugins": [
+    [
+      "prismjs",
+      {
+        "languages": [
+          "javascript",
+          "php",
+          "json",
+          "bash",
+          "docker",
+          "dot",
+          "apacheconf"
+        ],
+        "css": true,
+        "theme": "okaidia",
+        "plugins": [
+          "line-numbers",
+          "toolbar",
+          "copy-to-clipboard",
+          "show-language",
+          "highlight-keywords",
+          "remove-initial-line-feed"
+        ]
+      }
+    ]
+  ]
+}
