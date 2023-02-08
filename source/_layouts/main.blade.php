@@ -72,9 +72,7 @@
     @endif
 
     <style>
-        pre[class*="language-"] {
-            font-size: 0.7rem !important;
-        }
+       
     </style>
 </head>
 
@@ -99,7 +97,7 @@
                 </a>
 
             </div>
-            <h1 class="text-xl my-0">Dokumentation <br><code class="text-xs text-main-100 bg-slate-700 rounded-full px-2 py-1">Version: 1.74</code></h1>
+            <h1 class="text-xl my-0">Dokumentation <br><code class="text-xs text-main-100 bg-slate-700 rounded-full px-2 py-1">Version: 1.7x</code></h1>
         </div>
 
         @yield('nav-toggle')

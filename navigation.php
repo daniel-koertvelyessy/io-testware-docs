@@ -4,50 +4,50 @@
         'Überblick'    => [
             'url'      => 'docs/getting-started',
             'children' => [
-                'Seitenaufbau'   => 'docs/general-ui',
-                'Prozesse' => 'docs/general-processes',
-                'Objektstrukturen' => 'docs/general-objects',
+                'Seitenaufbau'   => 'docs/1.7/general-ui',
+                'Prozesse' => 'docs/1.7/general-processes',
+                'Objektstrukturen' => 'docs/1.7/general-objects',
             ],
         ],
         'Installation' => [
-            'url'      => 'docs/installation-main',
+            'url'      => 'docs/1.7/installation-main',
             'children' => [
-                'LAPP'   => 'docs/installation-lapp',
-                'Docker' => 'docs/installation-docker',
+                'LAPP'   => 'docs/1.7/installation-lapp',
+                'Docker' => 'docs/1.7/installation-docker',
             ]
         ],
         'System'       => [
-            'url'      => 'docs/system-main',
+            'url'      => 'docs/1.7/system-main',
             'children' => [
-                'Die Konsole'      => 'docs/console-main',
-                'testware Skripte' => 'docs/testware-scripts',
+                'Die Konsole'      => 'docs/1.7/system-console',
+                'testware Skripte' => 'docs/1.7/system-scripts',
             ]
         ],
         'Verwaltung'   => [
-            'url'      => 'docs/api-main',
+            'url'      => 'docs/1.7/backend-main',
             'children' => [
-                'Standorte'      => '#',
-                'Organisationen' => '#',
-                'Vorschriften'   => '#',
+                'Standorte'      => 'backend-locations',
+                'Organisationen' => 'backend-organisation',
+                'Vorschriften'   => 'backend-requirements',
             ]
         ],
         'Objekte'      => [
-            'url'      => 'docs/api-main',
+            'url'      => 'docs/1.7/objects-main',
             'children' => [
-                'Produkte'  => '#',
-                'Geräte'    => '#',
-                'Prüfungen' => '#',
+                'Produkte'  => 'objects-products',
+                'Geräte'    => 'objects-equipment',
+                'Prüfungen' => 'objects-control',
             ]
         ],
         'API'          => [
-            'url'      => 'docs/api-main',
+            'url'      => 'docs/1.7/api-main',
             'children' => [
-                'Standorte'      => '#',
-                'Produkte'       => '#',
-                'Organisationen' => '#',
-                'Vorschriften'   => '#',
-                'Geräte'         => '#',
-                'Prüfungen'      => '#',
+                'Standorte'      => 'api-locations',
+                'Produkte'       => 'api-productsn',
+                'Organisationen' => 'api-organisatio',
+                'Vorschriften'   => 'api-requirements',
+                'Geräte'         => 'api-equipment',
+                'Prüfungen'      => 'api-control',
             ]
         ],
         'Github'       => 'https://github.com/daniel-koertvelyessy/testware',

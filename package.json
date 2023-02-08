@@ -8,7 +8,7 @@
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.3",
         "axios": "^0.21.1",
-        "docsearch.js": "^2.6.3",
+        "@docsearch/js": "^3.3.3",
         "fuse.js": "^6.4.6",
         "highlight.js": "^10.5.0",
         "laravel-mix": "^6.0.49",
