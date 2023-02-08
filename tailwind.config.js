@@ -9,7 +9,7 @@ module.exports = {
     'source/**/*.js',
     'source/**/*.php',
     'source/**/*.vue',
-    './source/**/*.{html,js,vue}',
+    './source/**/*.{html,js,vue}'
   ]),
   theme: {
     extend: {

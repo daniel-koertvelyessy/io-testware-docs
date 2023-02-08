@@ -13,11 +13,9 @@
           "apacheconf"
         ],
         "css": true,
-        "theme": "okaidia",
+        "theme": "default",
         "plugins": [
           "line-numbers",
-          "toolbar",
-          "copy-to-clipboard",
           "show-language",
           "highlight-keywords",
           "remove-initial-line-feed"

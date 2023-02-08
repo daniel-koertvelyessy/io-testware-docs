@@ -29,6 +29,13 @@ code {
     @apply text-xs;
 }
 
+pre {
+    @apply text-slate-100;
+    font-size: 0.85rem !important;
+    @apply border;
+    @apply border-main-600;
+    @apply rounded;
+}
 
 h1,
 h2,
@@ -85,6 +92,7 @@ hr {
 }
 
 li {
+
     & ul,
     & ol {
         @apply ml-2.5;
@@ -137,7 +145,7 @@ p {
     @apply bg-main-400;
 }
 
-.button-main{
+.button-main {
     @apply flex;
     @apply w-full;
     @apply justify-center;
@@ -161,7 +169,7 @@ p {
     @apply ease-out;
 }
 
-input{
+input {
     @apply mt-1;
     @apply block;
     @apply w-full;
@@ -177,7 +185,7 @@ input{
     @apply sm:text-sm;
 }
 
-select{
+select {
     @apply mt-1;
     @apply block;
     @apply w-full;
@@ -195,7 +203,7 @@ select{
 }
 
 
-label{
+label {
     @apply block;
     @apply text-sm;
     @apply font-medium;

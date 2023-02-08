@@ -1,5 +1,5 @@
 window.axios = require('axios');
-window.docsearch = require('docsearch.js');
+window.docsearch = require('@docsearch/js');
 
 
 import Vue from 'vue';
@@ -10,6 +10,7 @@ import Contactsupport from './components/Contactsupport.vue';
 import Requestdemo from './components/Requestdemo.vue';
 
 import Prism from 'prismjs';
+
 
 Prism.highlightAll();
 
