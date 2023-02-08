@@ -31,3 +31,8 @@
     @apply text-gray-800;
     @apply text-sm;
 }
+
+.hljs-copy {
+    float: right;
+    cursor: pointer;
+}

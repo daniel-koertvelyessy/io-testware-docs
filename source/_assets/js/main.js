@@ -10,6 +10,8 @@ import Contactsupport from './components/Contactsupport.vue';
 import Requestdemo from './components/Requestdemo.vue';
 import hljs from 'highlight.js/lib/core';
 
+import'./components/copycode';
+
 import Alpine from 'alpinejs'
 
 window.Alpine = Alpine

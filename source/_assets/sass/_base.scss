@@ -131,15 +131,17 @@ p {
 
 pre {
     @apply p-4;
+    @apply pt-8;
     @apply my-6;
-    @apply text-base;
-    @apply bg-slate-200;
+    @apply text-xs;
+    @apply bg-slate-700;
     @apply leading-loose;
     @apply rounded;
     @apply shadow;
     @apply overflow-x-auto;
 
     & code {
+        @apply relative;
         @apply block;
         @apply p-0;
         @apply bg-transparent;
