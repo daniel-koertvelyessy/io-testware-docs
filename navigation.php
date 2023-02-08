@@ -26,28 +26,28 @@
         'Verwaltung'   => [
             'url'      => 'docs/1.7/backend-main',
             'children' => [
-                'Standorte'      => 'backend-locations',
-                'Organisationen' => 'backend-organisation',
-                'Vorschriften'   => 'backend-requirements',
+                'Standorte'      => 'docs/1.7/backend-locations',
+                'Organisationen' => 'docs/1.7/backend-organisation',
+                'Vorschriften'   => 'docs/1.7/backend-requirements',
             ]
         ],
         'Objekte'      => [
             'url'      => 'docs/1.7/objects-main',
             'children' => [
-                'Produkte'  => 'objects-products',
-                'Geräte'    => 'objects-equipment',
-                'Prüfungen' => 'objects-control',
+                'Produkte'  => 'docs/1.7/objects-products',
+                'Geräte'    => 'docs/1.7/objects-equipment',
+                'Prüfungen' => 'docs/1.7/objects-control',
             ]
         ],
         'API'          => [
             'url'      => 'docs/1.7/api-main',
             'children' => [
-                'Standorte'      => 'api-locations',
-                'Produkte'       => 'api-productsn',
-                'Organisationen' => 'api-organisatio',
-                'Vorschriften'   => 'api-requirements',
-                'Geräte'         => 'api-equipment',
-                'Prüfungen'      => 'api-control',
+                'Standorte'      => 'docs/1.7/api-locations',
+                'Produkte'       => 'docs/1.7/api-productsn',
+                'Organisationen' => 'docs/1.7/api-organisatio',
+                'Vorschriften'   => 'docs/1.7/api-requirements',
+                'Geräte'         => 'docs/1.7/api-equipment',
+                'Prüfungen'      => 'docs/1.7/api-control',
             ]
         ],
         'Github'       => 'https://github.com/daniel-koertvelyessy/testware',
