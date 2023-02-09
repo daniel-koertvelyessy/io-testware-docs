@@ -154,6 +154,62 @@ $.ajax(settings).done(function (response) {
     }
 }</code></pre>
 
+    <tabs id="apimain">
+        <tabitem title="jQuery">
+<pre><code class="language-js">var data = JSON.stringify({"bezeichner":"kleve021M","name":"Mein neuer Betrieb","adresse":{"name_kurz":"klv021","strasse":"Klever Berg","nr":21,"plz":"47533","ort":"Kleve"}});
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function() {
+  if(this.readyState === 4) {
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("POST", "testware.test/api/v1/location");
+xhr.setRequestHeader("Accept", "application/json");
+xhr.setRequestHeader("Authorization", "Bearer C1VF6Lx5sWeqC6nlVihwS5GuujkflFg9qSK2WhQkXrSgLbRAPtinAJQfhGViywcz80VDO7akePXOhcWx");
+xhr.setRequestHeader("Content-Type", "application/json");
+
+xhr.send(data);</code></pre>
+        </tabitem>
+        <tabitem title="cUrl">
+            <pre><code class="language-php">$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'testware.test/api/v1/location',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'POST',
+  CURLOPT_POSTFIELDS =>'{
+    "bezeichner" : "kleve021M",
+    "name" : "Mein neuer Betrieb",
+    "adresse":{
+        "name_kurz" : "klv021",
+        "strasse" : "Klever Berg",
+        "nr":21,
+        "plz":"47533",
+        "ort":"Kleve"
+    }
+}',
+  CURLOPT_HTTPHEADER => array(
+    'Accept: application/json',
+    'Authorization: Bearer C1VF6Lx5sWeqC6nlVihwS5GuujkflFg9qSK2WhQkXrSgLbRAPtinAJQfhGViywcz80VDO7akePXOhcWx',
+    'Content-Type: application/json'
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+echo $response;</code></pre>
+        </tabitem>
+    </tabs>
     <p>Der API Zugriff mit <code>jQuery</code> könnte mit folgendem Code ausgeführt werden:</p>
     <ul class="nav nav-bordered"
         id="docs-tab"
@@ -225,23 +281,7 @@ $.ajax(settings).done(function (response) {
              aria-labelledby="docs-tab-jQuery"
         >
 
-<pre><code class="language-js">var data = JSON.stringify({"bezeichner":"kleve021M","name":"Mein neuer Betrieb","adresse":{"name_kurz":"klv021","strasse":"Klever Berg","nr":21,"plz":"47533","ort":"Kleve"}});
 
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function() {
-  if(this.readyState === 4) {
-    console.log(this.responseText);
-  }
-});
-
-xhr.open("POST", "testware.test/api/v1/location");
-xhr.setRequestHeader("Accept", "application/json");
-xhr.setRequestHeader("Authorization", "Bearer C1VF6Lx5sWeqC6nlVihwS5GuujkflFg9qSK2WhQkXrSgLbRAPtinAJQfhGViywcz80VDO7akePXOhcWx");
-xhr.setRequestHeader("Content-Type", "application/json");
-
-xhr.send(data);</code></pre>
 
         </div>
         <div class="tab-pane bg-light fade p-3"
@@ -250,39 +290,7 @@ xhr.send(data);</code></pre>
              aria-labelledby="docs-tab-curl"
         >
 
-<pre><code class="language-php">$curl = curl_init();
 
-curl_setopt_array($curl, array(
-  CURLOPT_URL => 'testware.test/api/v1/location',
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => '',
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => true,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => 'POST',
-  CURLOPT_POSTFIELDS =>'{
-    "bezeichner" : "kleve021M",
-    "name" : "Mein neuer Betrieb",
-    "adresse":{
-        "name_kurz" : "klv021",
-        "strasse" : "Klever Berg",
-        "nr":21,
-        "plz":"47533",
-        "ort":"Kleve"
-    }
-}',
-  CURLOPT_HTTPHEADER => array(
-    'Accept: application/json',
-    'Authorization: Bearer C1VF6Lx5sWeqC6nlVihwS5GuujkflFg9qSK2WhQkXrSgLbRAPtinAJQfhGViywcz80VDO7akePXOhcWx',
-    'Content-Type: application/json'
-  ),
-));
-
-$response = curl_exec($curl);
-
-curl_close($curl);
-echo $response;</code></pre>
 
         </div>
         <div class="tab-pane bg-light fade p-3 show"

@@ -1,5 +1,5 @@
 ---
-title: Komplette Dokumentation der testWare, Stand 1.7x
+title: Komplette Dokumentation der testWare v1.7x
 description: Die testWare ist eine flexible, zentrale Geräteverwaltung. Hier ist die komplette Dokumentation einsehbar. Von der Installation bis zum eigentlichen Gebrauch.
 readingtime: < 1 min
 ---
