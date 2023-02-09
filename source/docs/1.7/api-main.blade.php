@@ -154,12 +154,9 @@ $.ajax(settings).done(function (response) {
         "ort":"Kleve"
     }
 }</code></pre>
-
-
-
-
-    <p>Der API Zugriff mit <x-code>JavaScript</x-code> könnte mit folgendem Code ausgeführt werden:</p>
-    <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) :'jquery'}">
+    
+    <p>Der API Zugriff könnte mit folgendem Code ausgeführt werden:</p>
+    <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) :'curl'}">
         <div class="sm:hidden">
             <label for="tabs"
                    class="sr-only">Select a tab</label>
@@ -181,17 +178,23 @@ $.ajax(settings).done(function (response) {
                 <nav class="-mb-px flex space-x-8"
                      aria-label="Tabs">
                     <!-- Current: "tab-active", Default: "border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300" -->
-                    <a x-on:click.prevent="tab = 'jquery' ; window.location.hash ='jquery'"
-                       href="#"
-                       x-bind:class=" {'tab-active' : tab === 'jquery', 'tab-inactive' : tab !=='jquery'} "
-                       class="tab-item"
-                    >JavaScript</a>
-
                     <a x-on:click.prevent="tab = 'curl' ; window.location.hash ='curl'"
                        href="#"
                        x-bind:class=" {'tab-active' : tab === 'curl', 'tab-inactive' : tab !=='curl'} "
                        class="tab-item"
-                    >PHP curl</a>
+                    >cURL</a>
+
+                    <a x-on:click.prevent="tab = 'js' ; window.location.hash ='js'"
+                       href="#"
+                       x-bind:class=" {'tab-active' : tab === 'js', 'tab-inactive' : tab !=='js'} "
+                       class="tab-item"
+                    >JavaScript</a>
+
+                    <a x-on:click.prevent="tab = 'php' ; window.location.hash ='php'"
+                       href="#"
+                       x-bind:class=" {'tab-active' : tab === 'php', 'tab-inactive' : tab !=='php'} "
+                       class="tab-item"
+                    >PHP-curl</a>
 
                     <a x-on:click.prevent="tab = 'python' ; window.location.hash ='python'"
                        href="#"
@@ -214,7 +217,24 @@ $.ajax(settings).done(function (response) {
                 </nav>
             </div>
         </div>
-        <section x-show="tab === 'jquery'">
+        <section x-show="tab === 'curl'">
+            <pre><code class="language-text">curl --location --request POST 'testware.test/api/v1/location' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer gMJtXnxgwWgQaIYGP5SVGGEzelWh6wBB9PvjJpMiomOQNpLOVc57Cw0QS40ejFCnV23u33DFM8yHilIi' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "bezeichner": "kleve021M",
+    "name": "Mein neuer Betrieb",
+    "adresse": {
+        "name_kurz": "klv021",
+        "strasse": "Klever Berg",
+        "nr": 21,
+        "plz": "47533",
+        "ort": "Kleve"
+    }
+}'</code></pre>
+        </section>
+        <section x-show="tab === 'js'">
 <pre><code class="language-js">let data = JSON.stringify({"bezeichner":"kleve021M","name":"Mein neuer Betrieb","adresse":{"name_kurz":"klv021","strasse":"Klever Berg","nr":21,"plz":"47533","ort":"Kleve"}});
 
 let xhr = new XMLHttpRequest();
@@ -233,7 +253,7 @@ xhr.setRequestHeader("Content-Type", "application/json");
 
 xhr.send(data);</code></pre>
         </section>
-        <section x-show="tab === 'curl'">
+        <section x-show="tab === 'php'">
 <pre><code class="language-php">$curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -270,12 +290,23 @@ echo $response;</code></pre>
         </section>
         <section x-show="tab === 'python'">
             <pre><code class="language-python">import http.client
+import json
 
-conn = http.client.HTTPSConnection("https://demo.testware.io")
-payload = "{\r\n    \"bezeichner\" : \"kleve021M\",\r\n    \"name\" : \"Mein neuer Betrieb\",\r\n    \"adresse\":{\r\n        \"name_kurz\" : \"klv021\",\r\n        \"strasse\" : \"Klever Berg\",\r\n        \"nr\":21,\r\n        \"plz\":\"47533\",\r\n        \"ort\":\"Kleve\"\r\n    }\r\n}"
+conn = http.client.HTTPSConnection("testware.test")
+payload = json.dumps({
+  "bezeichner": "kleve021M",
+  "name": "Mein neuer Betrieb",
+  "adresse": {
+    "name_kurz": "klv021",
+    "strasse": "Klever Berg",
+    "nr": 21,
+    "plz": "47533",
+    "ort": "Kleve"
+  }
+})
 headers = {
   'Accept': 'application/json',
-  'Authorization': 'Bearer C1VF6Lx5sWeqC6nlVihwS5GuujkflFg9qSK2WhQkXrSgLbRAPtinAJQfhGViywcz80VDO7akePXOhcWx',
+  'Authorization': 'Bearer gMJtXnxgwWgQaIYGP5SVGGEzelWh6wBB9PvjJpMiomOQNpLOVc57Cw0QS40ejFCnV23u33DFM8yHilIi',
   'Content-Type': 'application/json'
 }
 conn.request("POST", "/api/v1/location", payload, headers)
@@ -286,11 +317,21 @@ print(data.decode("utf-8"))</code></pre>
         <section x-show="tab === 'dart'">
         <pre><code class="language-dart">var headers = {
   'Accept': 'application/json',
-  'Authorization': 'Bearer C1VF6Lx5sWeqC6nlVihwS5GuujkflFg9qSK2WhQkXrSgLbRAPtinAJQfhGViywcz80VDO7akePXOhcWx',
+  'Authorization': 'Bearer gMJtXnxgwWgQaIYGP5SVGGEzelWh6wBB9PvjJpMiomOQNpLOVc57Cw0QS40ejFCnV23u33DFM8yHilIi',
   'Content-Type': 'application/json'
 };
-var request = http.Request('POST', Uri.parse('https://demo.testware.io/api/v1/location'));
-request.body = '''{\r\n    "bezeichner" : "kleve021M",\r\n    "name" : "Mein neuer Betrieb",\r\n    "adresse":{\r\n        "name_kurz" : "klv021",\r\n        "strasse" : "Klever Berg",\r\n        "nr":21,\r\n        "plz":"47533",\r\n        "ort":"Kleve"\r\n    }\r\n}''';
+var request = http.Request('POST', Uri.parse('testware.test/api/v1/location'));
+request.body = json.encode({
+  "bezeichner": "kleve021M",
+  "name": "Mein neuer Betrieb",
+  "adresse": {
+    "name_kurz": "klv021",
+    "strasse": "Klever Berg",
+    "nr": 21,
+    "plz": "47533",
+    "ort": "Kleve"
+  }
+});
 request.headers.addAll(headers);
 
 http.StreamedResponse response = await request.send();
@@ -300,17 +341,19 @@ if (response.statusCode == 200) {
 }
 else {
   print(response.reasonPhrase);
-}</code></pre>
+}
+</code></pre>
         </section>
         <section x-show="tab === 'java'">
-            <pre><code class="language-java">OkHttpClient client = new OkHttpClient().newBuilder().build();
+            <pre><code class="language-java">OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
 MediaType mediaType = MediaType.parse("application/json");
-RequestBody body = RequestBody.create(mediaType, "{\r\n    \"bezeichner\" : \"kleve021M\",\r\n    \"name\" : \"Mein neuer Betrieb\",\r\n    \"adresse\":{\r\n        \"name_kurz\" : \"klv021\",\r\n        \"strasse\" : \"Klever Berg\",\r\n        \"nr\":21,\r\n        \"plz\":\"47533\",\r\n        \"ort\":\"Kleve\"\r\n    }\r\n}");
+RequestBody body = RequestBody.create(mediaType, "{\r\n    \"bezeichner\": \"kleve021M\",\r\n    \"name\": \"Mein neuer Betrieb\",\r\n    \"adresse\": {\r\n        \"name_kurz\": \"klv021\",\r\n        \"strasse\": \"Klever Berg\",\r\n        \"nr\": 21,\r\n        \"plz\": \"47533\",\r\n        \"ort\": \"Kleve\"\r\n    }\r\n}");
 Request request = new Request.Builder()
-  .url("https://demo.testware.io/api/v1/location")
+  .url("testware.test/api/v1/location")
   .method("POST", body)
   .addHeader("Accept", "application/json")
-  .addHeader("Authorization", "Bearer C1VF6Lx5sWeqC6nlVihwS5GuujkflFg9qSK2WhQkXrSgLbRAPtinAJQfhGViywcz80VDO7akePXOhcWx")
+  .addHeader("Authorization", "Bearer gMJtXnxgwWgQaIYGP5SVGGEzelWh6wBB9PvjJpMiomOQNpLOVc57Cw0QS40ejFCnV23u33DFM8yHilIi")
   .addHeader("Content-Type", "application/json")
   .build();
 Response response = client.newCall(request).execute();</code></pre>
