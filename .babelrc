@@ -10,7 +10,10 @@
           "bash",
           "docker",
           "dot",
-          "apacheconf"
+          "apacheconf",
+          "python",
+          "dart",
+          "java"
         ],
         "css": true,
         "theme": "default",

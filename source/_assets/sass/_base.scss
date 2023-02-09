@@ -209,3 +209,25 @@ label {
     @apply font-medium;
     @apply text-slate-700;
 }
+
+.tab-item{
+    @apply whitespace-nowrap;
+    @apply py-4;
+    @apply px-1;
+    @apply border-b-2;
+    @apply font-medium;
+    @apply text-sm;
+    @apply no-underline;
+    @apply text-slate-500;
+}
+.tab-inactive{
+    @apply border-transparent;
+    @apply text-slate-500;
+    @apply hover:text-slate-700;
+    @apply hover:border-slate-300;
+}
+
+.tab-active{
+    @apply border-main-500;
+    @apply text-main-600;
+}
