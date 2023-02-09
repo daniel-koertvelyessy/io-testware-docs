@@ -154,7 +154,7 @@ $.ajax(settings).done(function (response) {
         "ort":"Kleve"
     }
 }</code></pre>
-    
+
     <p>Der API Zugriff könnte mit folgendem Code ausgeführt werden:</p>
     <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) :'curl'}">
         <div class="sm:hidden">
