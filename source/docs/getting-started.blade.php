@@ -12,7 +12,7 @@ readingtime: ~ 2 min
 
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <x-overview-item header="Allgemeines" link="docs/1.7/getting-started">
-            Hier geht es um allgemeine Informationen wie die graphische Oberfläche oder grundlegende Prozesse zur Verwendung der testWare.
+            Hier geht es um allgemeine Informationen wie die grafische Oberfläche oder grundlegende Prozesse zur Verwendung der testWare.
         </x-overview-item>
 
         <x-overview-item header="Installation" link="docs/1.7/installation-main">

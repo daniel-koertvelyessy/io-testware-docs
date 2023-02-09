@@ -31,10 +31,14 @@
           content="{{ $page->getUrl() }}"
     />
     <meta property="og:image"
-          content="{{ $page->pageImage??'/mstile-310x310.png' }}"
+          content="{{ $page->pageImage??'https://docs.testware.io/assets/img/docs_logo_1.7.webp' }}"
     />
     <meta property="og:type"
           content="website"
+    />
+
+    <meta property="twitter:image"
+          content="{{ $page->pageImage??'https://docs.testware.io/assets/img/docs_logo_1.7.webp' }}"
     />
 
     <meta name="twitter:image:alt"
