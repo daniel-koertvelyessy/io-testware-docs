@@ -7,7 +7,9 @@ readingtime: < 1 min
 
 @section('body')
     <section class="container max-w-6xl mx-auto px-6 py-10 md:py-12">
+
         <div class="flex flex-col-reverse mb-10 lg:flex-row lg:mb-24">
+
             <div class="mt-8">
                 <h1 id="intro-docs-haupseite">{{ $page->siteName }}</h1>
                 <h2 id="intro-subheader"
