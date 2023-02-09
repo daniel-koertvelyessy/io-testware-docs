@@ -8,3 +8,4 @@ composer.json
 cache/1ac78cd50e153b9e28821f292643c011667d07d8.php
 *.xml
 *.iml
+/.idea

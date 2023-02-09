@@ -1,7 +1,7 @@
 ---
-title: Getting Started
-description: Getting started with Jigsaw's docs starter template is as easy as 1, 2, 3.
-reading-time: ~ 5min
+title: Überblick der Dokumentation
+description: Die Dokumentation der testWare umfasst 6 Hauptbereiche. Allgemeines, Installation, System, Verwaltung, Objekte und die REST-API
+readingtime: ~ 2 min
 ---
 @extends('_layouts/documentation')
 @section('content')
@@ -10,8 +10,8 @@ reading-time: ~ 5min
 
     <p>Diese Dokumentation gliedert sich in 6 Bereiche:</p>
 
-    <section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <x-overview-item header="Überblick" link="docs/1.7/getting-started">
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <x-overview-item header="Allgemeines" link="docs/1.7/getting-started">
             Hier geht es um allgemeine Informationen wie die graphische Oberfläche oder grundlegende Prozesse zur Verwendung der testWare.
         </x-overview-item>
 
@@ -32,7 +32,7 @@ reading-time: ~ 5min
         </x-overview-item>
 
         <x-overview-item header="REST-API" link="docs/1.7/api-main">
-            Viele Aufgaben der Einrichtung der testWare erfordern einige Zeit. Daher ist sie mit einer API ausgestattet, welche es ermöglkicht, aus der existierenden ERP die Objekte automatisch anzulegen, aktualisieren oder zu löschen.
+            Viele Aufgaben der Einrichtung der testWare erfordern einige Zeit. Daher ist sie mit einer API ausgestattet, welche es ermöglicht, aus der existierenden ERP die Objekte automatisch anzulegen, aktualisieren oder zu löschen.
         </x-overview-item>
 
     </section>

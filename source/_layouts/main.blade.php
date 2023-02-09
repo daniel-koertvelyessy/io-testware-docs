@@ -14,6 +14,10 @@
           content="{{ $page->description ?? $page->siteDescription }}"
     >
 
+    <meta property="og:locale" content="de_DE" />
+
+    <meta property="og:locale:alternate" content="en_US" />
+
     <meta property="og:site_name"
           content="{{ $page->siteName }}"
     />
@@ -27,7 +31,7 @@
           content="{{ $page->getUrl() }}"
     />
     <meta property="og:image"
-          content="/assets/img/logo.png"
+          content="{{ $page->pageImage??'/mstile-310x310.png' }}"
     />
     <meta property="og:type"
           content="website"
@@ -35,15 +39,28 @@
 
     <meta name="twitter:image:alt"
           content="{{ $page->siteName }}"
-    >
+    />
+
+    <meta name="twitter:site"
+          content="@ThermoControlKo"
+    />
+
+    <meta name="twitter:label1"
+          content="Geschätzte Lesezeit"
+    />
+
+    <meta name="twitter:data1"
+          content="{{ $page->readingtime??'2 Minuten' }}"
+    />
+
     <meta name="twitter:card"
           content="summary_large_image"
-    >
+    />
 
     @if ($page->docsearchApiKey && $page->docsearchIndexName)
         <meta name="generator"
               content="tighten_jigsaw_doc"
-        >
+        />
     @endif
 
     <title>{{ $page->siteName }}{{ $page->title ? ' | ' . $page->title : '' }}</title>
@@ -82,7 +99,7 @@
 >
 <div id="app"
      x-data="{ showResonsiveMenu: false, showsubmen: false, shrinkNav: false }"
-     x-on:scroll.window="shrinkNav = window.pageYOffset > 105"
+     x-on:scroll.window="shrinkNav = window.scrollY > 105"
 >
     <header class="flex items-center shadow bg-white border-b h-24 mb-8 py-4"
             role="banner"
@@ -93,11 +110,14 @@
                    title="{{ $page->siteName }} home"
                    class="inline-flex items-center no-underline"
                 >
-                    <span class="text-2xl">testWare</span>
+                    <span class="text-3xl">testWare</span>
                 </a>
 
             </div>
-            <h1 class="text-xl my-0">Dokumentation <br><code class="text-xs text-main-100 bg-slate-700 rounded-full px-2 py-1">Version: 1.7x</code></h1>
+            <header class="hidden lg:block my-0">
+                <span class="text-xl font-sans font-semibold">Dokumentation</span><br>
+                <code class="text-xxs sm:text-xs text-main-100 bg-slate-700 rounded-full px-2 py-1">Version: 1.7x</code>
+            </header>
         </div>
 
         @yield('nav-toggle')

@@ -1,8 +1,9 @@
 <?php
 
     return [
-        'Überblick'    => [
-            'url'      => 'docs/getting-started',
+        'Überblick' => ['url'      => 'docs/getting-started'],
+        'Allgemeines'    => [
+            'url'      => 'docs/general-main',
             'children' => [
                 'Seitenaufbau'   => 'docs/1.7/general-ui',
                 'Prozesse' => 'docs/1.7/general-processes',
