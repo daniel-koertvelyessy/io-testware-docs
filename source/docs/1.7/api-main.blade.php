@@ -7,32 +7,46 @@ reading-time: ~ 10min
 @section('content')
 
     <h1 id="api-start">Kurze Einführung</h1>
-    <p>testWare bietet neben der Weboberfläche auch eine sogenannte REST-API. Die Abkürzung <x-code>API</x-code> steht für
-        <x-code>Application Program Interface</x-code> und beschreibt, eine Schnittstelle zu einem Programm. Diese Schnittstelle ermöglicht die REST Kommunikation mit der Datenbank der testWare ohne einen Browser.
+    <p>testWare bietet neben der Weboberfläche auch eine sogenannte REST-API. Die Abkürzung
+        <x-code>API</x-code>
+        steht für
+        <x-code>Application Program Interface</x-code>
+        und beschreibt, eine Schnittstelle zu einem Programm. Diese Schnittstelle ermöglicht die REST Kommunikation mit der Datenbank der testWare ohne einen Browser.
     </p>
 
     <p>Im Gegensatz zu der Weboberfläche, welche eine einmalige Authentifizierung eines Benutzers erfordert, muss die Authentifizierung mit jedem Aufruf erfolgen. Die API der testware verwendet hierzu eine 80 Zeichen lange Kette von Zahlen und Buchstaben, die auch
-        <x-code>Token</x-code> genannt wird. Dieser Token kann für jeden registrierten Benutzer der testware in der Account-Oberfläche generiert werden.
+        <x-code>Token</x-code>
+        genannt wird. Dieser Token kann für jeden registrierten Benutzer der testware in der Account-Oberfläche generiert werden.
     </p>
     <p>Für einen Zugriff muss dieser als
-        <x-code>Bearer</x-code> im Request angegeben werden. Im Beispiel unten wird ein Zugriff auf die API mit
-        <x-code>jQuery</x-code> hergestellt, um einen neuen Betrieb mit Adresse anzulegen.</p>
+        <x-code>Bearer</x-code>
+        im Request angegeben werden. Im <a href="#api-script-examples">Beispiel unten</a> wird ein Zugriff auf die API mit
+        <x-code>jQuery</x-code>
+        hergestellt, um einen neuen Betrieb mit Adresse anzulegen.
+    </p>
     <h2 id="api-endpoint">Endpunkte</h2>
     <p>Im Gegensatz zur Darstellung der testware im Browser, besitzt die API keine Navigation, welche man über Links erreichen kann. Die API benutzt hierzu sogenannte Endpunkte.</p>
     <p>Diese Endpunkte bestehen aus der Kombination einer Webadresse und einer Übertragungsart (engl.
-        <x-code>method</x-code>). Die Webadresse stellt sich aus der Domäne z.B.
-        <x-code type="dark">testware.io</x-code>
+        <x-code>method</x-code>
+        ). Die Webadresse stellt sich aus der Domäne z.B.
+        <x-code type="dark">https://demo.testware.io</x-code>
         , einem sogenannten Präfix und dem Namen zusammen. Die aktuelle Version der testware API ist V1, das entsprechende Präfix lautet
         <x-code type="dark">api/v1/</x-code>
         und der Name z.B.
         <x-code type="dark">locations</x-code>
         . Die Webadresse lautet demnach
-        <x-code type="dark">testware.io/api/v1/locations</x-code>
+        <x-code type="dark">https://demo.testware.io/api/v1/locations</x-code>
         .
     </p>
-    <p>Die Übertragungsart bezieht sich auf die verschiedene http Request Arten beispielsweise <x-code type="get">GET</x-code>,
-        <x-code type="post">POST</x-code> oder <x-code type="delete">DELETE</x-code>. </p>
-    <h3 class="h5"
+    <p>Die Übertragungsart bezieht sich auf die verschiedene http Request Arten beispielsweise
+        <x-code type="get">GET</x-code>
+        ,
+        <x-code type="post">POST</x-code>
+        oder
+        <x-code type="delete">DELETE</x-code>
+        .
+    </p>
+    <h3 class="text-xl"
         id="api-rest"
     >Was ist REST?</h3>
     <p><strong>REST</strong> steht für <strong>RE</strong>presentational <strong>S</strong>tate
@@ -40,28 +54,48 @@ reading-time: ~ 10min
     </p>
     <p>Die unterstützten HTTP-Methoden lauten: </p>
     <ul class="list-none">
-        <li><x-code type="get">GET</x-code> - fordert Daten vom Server an</li>
-        <li><x-code type="post">POST</x-code> - übermittelt Daten an den Server</li>
-        <li><x-code type="put">PUT/PATCH</x-code> - ändern bestehende Daten auf dem Server</li>
-        <li><x-code type="delete">DELETE</x-code> - löscht bestehende Daten auf dem Server</li>
+        <li>
+            <x-code type="get">GET</x-code>
+            - fordert Daten vom Server an
+        </li>
+        <li>
+            <x-code type="post">POST</x-code>
+            - übermittelt Daten an den Server
+        </li>
+        <li>
+            <x-code type="put">PUT/PATCH</x-code>
+            - ändern bestehende Daten auf dem Server
+        </li>
+        <li>
+            <x-code type="delete">DELETE</x-code>
+            - löscht bestehende Daten auf dem Server
+        </li>
     </ul>
-    <p>Eine Auflistung aller Endpunkte der aktuellen Version inklusive der JSON Struktur finden Sie im Menüpunkt
-        <a href="https://demo.testware.io/docs/api/endpoints">Endpunkte</a>
-        .
-    </p>
+
 
     <h2 id="api-json">JSON Daten</h2>
     <p>Die Daten, welche durch die API zwischen der Datenbank und der Anwendung ausgetauscht werden, sind im weit verbreiteten JSON Format gehalten. JSON ermöglicht, verschachtelte Werte in Textform darzustellen. Dieses vereinfacht die Übertragung komplexerer Datenstrukturen über das Internet.</p>
-    <p>JSON ist im einfachsten Fall ein <x-code>Schlüssel : Wert</x-code> (engl.
-        <strong>key : value</strong>) Paar, welches mit einem <x-code>:</x-code> getrennt und mit
-        <x-code>{}</x-code> Klammern umschlossen wird. Mehrere Paare werden mit einem Komma getrennt. </p>
+    <p>JSON ist im einfachsten Fall ein
+        <x-code>Schlüssel : Wert</x-code>
+        (engl.
+        <strong>key : value</strong>) Paar, welches mit einem
+        <x-code>:</x-code>
+        getrennt und mit
+        <x-code>{}</x-code>
+        Klammern umschlossen wird. Mehrere Paare werden mit einem Komma getrennt.
+    </p>
 
     <pre><code class="language-json">{
     "key-1" : "value",
     "key-2" : 231.0
 }</code></pre>
 
-    <p>Als Werte können praktisch alle Arten von Daten darstellen, wie Texte, Zahlen (Kommazahlen mit <x-code>.</x-code> statt einem <x-code>,</x-code> oder auch weitere Schlüssel:Wert Paare.</p>
+    <p>Als Werte können praktisch alle Arten von Daten darstellen, wie Texte, Zahlen (Kommazahlen mit
+        <x-code>.</x-code>
+        statt einem
+        <x-code>,</x-code>
+        oder auch weitere Schlüssel:Wert Paare.
+    </p>
 
     <pre><code class="language-json">{
     "key" : {
@@ -79,7 +113,7 @@ reading-time: ~ 10min
   "timeout": 0,
   "headers": {
     "Accept": "application/json",
-    "Authorization": "Bearer C1VF6Lx5sWeqC6nlVihwS5GuujkflFg9qSK2WhQkXrSgLbRAPtinAJQfhGViywcz80VDO7akePXOhcWx",
+    "Authorization": "Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
     "Content-Type": "application/json"
   }
 };
@@ -89,7 +123,10 @@ $.ajax(settings).done(function (response) {
 });</code></pre>
 
     <p>Die Antwort der API packt die Daten in ein
-        <x-code>data</x-code> Objekt (erkennbar duch die Einfassung der Schlüssel: Wert Paare mit <x-code>{}</x-code> Klammern.
+        <x-code>data</x-code>
+        Objekt (erkennbar duch die Einfassung der Schlüssel: Wert Paare mit
+        <x-code>{}</x-code>
+        Klammern.
     </p>
 
     <pre><code class="language-json">{
@@ -103,8 +140,12 @@ $.ajax(settings).done(function (response) {
     }
 }</code></pre>
 
-    <p>Eine Sammlung von Datensätzen wird mit <x-code>[]</x-code> Klammern umfasst. Die einzelnen Datensäte mit
-        <x-code>,</x-code> getrennt.</p>
+    <p>Eine Sammlung von Datensätzen wird mit
+        <x-code>[]</x-code>
+        Klammern umfasst. Die einzelnen Datensäte mit
+        <x-code>,</x-code>
+        getrennt.
+    </p>
     <pre><code class="language-json">[
     {
         "id": 1,
@@ -129,7 +170,7 @@ $.ajax(settings).done(function (response) {
     {...}
 ]</code></pre>
     <x-note>
-        <h4 class="h5">Hinweis</h4>
+        <h4 class="text-xl">Hinweis</h4>
         <p class="mb-0">Die obige Beschreibung ist für einen schnellen Einstieg einfach gehalten. Eine komplette Beschreibung des JSON Formates finden Sie auf der offiziellen Seite
             <a href="https://www.json.org/json-de.html"
                target="_blank"
@@ -139,9 +180,13 @@ $.ajax(settings).done(function (response) {
         </p>
     </x-note>
 
-    <h2 id="api-script-js">Codebeispiel für API Zugriff</h2>
+    <h2 id="api-script-examples">Codebeispiel für API Zugriff</h2>
     <p>Als Beispiel soll ein neuer Betrieb mit einer dazugehörigen Adresse angelegt werden. Die JSON Daten, welche zur API mit der auf den Endpunkt
-        <x-code>https://demo.testware.io/api/v1/location</x-code> mit der <x-code type="post">POST</x-code> Methode gesendet werden sollen lauten:</p>
+        <x-code>https://demo.testware.io/api/v1/location</x-code>
+        mit der
+        <x-code type="post">POST</x-code>
+        Methode gesendet werden sollen lauten:
+    </p>
 
     <pre><code class="language-json">{
     "bezeichner":"kleve021M",
@@ -159,11 +204,13 @@ $.ajax(settings).done(function (response) {
     <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) :'curl'}">
         <div class="sm:hidden">
             <label for="tabs"
-                   class="sr-only">Select a tab</label>
+                   class="sr-only"
+            >Select a tab</label>
             <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
             <select id="tabs"
                     name="tabs"
-                    class="block w-full rounded-md border-slate-300 py-2 pl-3 pr-10 text-base focus:border-main-500 focus:outline-none focus:ring-main-500 sm:text-sm">
+                    class="block w-full rounded-md border-slate-300 py-2 pl-3 pr-10 text-base focus:border-main-500 focus:outline-none focus:ring-main-500 sm:text-sm"
+            >
                 <option>My Account</option>
 
                 <option>Company</option>
@@ -176,7 +223,8 @@ $.ajax(settings).done(function (response) {
         <div class="hidden sm:block">
             <div class="border-b border-slate-200">
                 <nav class="-mb-px flex space-x-8"
-                     aria-label="Tabs">
+                     aria-label="Tabs"
+                >
                     <!-- Current: "tab-active", Default: "border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300" -->
                     <a x-on:click.prevent="tab = 'curl' ; window.location.hash ='curl'"
                        href="#"
@@ -218,9 +266,9 @@ $.ajax(settings).done(function (response) {
             </div>
         </div>
         <section x-show="tab === 'curl'">
-            <pre><code class="language-text">curl --location --request POST 'testware.test/api/v1/location' \
+            <pre><code class="language-bash">curl --location --request POST 'testware.test/api/v1/location' \
 --header 'Accept: application/json' \
---header 'Authorization: Bearer gMJtXnxgwWgQaIYGP5SVGGEzelWh6wBB9PvjJpMiomOQNpLOVc57Cw0QS40ejFCnV23u33DFM8yHilIi' \
+--header 'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "bezeichner": "kleve021M",
@@ -248,7 +296,7 @@ xhr.addEventListener("readystatechange", function() {
 
 xhr.open("POST", "https://demo.testware.io/api/v1/location");
 xhr.setRequestHeader("Accept", "application/json");
-xhr.setRequestHeader("Authorization", "Bearer C1VF6Lx5sWeqC6nlVihwS5GuujkflFg9qSK2WhQkXrSgLbRAPtinAJQfhGViywcz80VDO7akePXOhcWx");
+xhr.setRequestHeader("Authorization", "Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 xhr.setRequestHeader("Content-Type", "application/json");
 
 xhr.send(data);</code></pre>
@@ -278,7 +326,7 @@ curl_setopt_array($curl, array(
 }',
   CURLOPT_HTTPHEADER => array(
     'Accept: application/json',
-    'Authorization: Bearer C1VF6Lx5sWeqC6nlVihwS5GuujkflFg9qSK2WhQkXrSgLbRAPtinAJQfhGViywcz80VDO7akePXOhcWx',
+    'Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     'Content-Type: application/json'
   ),
 ));
@@ -306,7 +354,7 @@ payload = json.dumps({
 })
 headers = {
   'Accept': 'application/json',
-  'Authorization': 'Bearer gMJtXnxgwWgQaIYGP5SVGGEzelWh6wBB9PvjJpMiomOQNpLOVc57Cw0QS40ejFCnV23u33DFM8yHilIi',
+  'Authorization': 'Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
   'Content-Type': 'application/json'
 }
 conn.request("POST", "/api/v1/location", payload, headers)
@@ -317,7 +365,7 @@ print(data.decode("utf-8"))</code></pre>
         <section x-show="tab === 'dart'">
         <pre><code class="language-dart">var headers = {
   'Accept': 'application/json',
-  'Authorization': 'Bearer gMJtXnxgwWgQaIYGP5SVGGEzelWh6wBB9PvjJpMiomOQNpLOVc57Cw0QS40ejFCnV23u33DFM8yHilIi',
+  'Authorization': 'Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
   'Content-Type': 'application/json'
 };
 var request = http.Request('POST', Uri.parse('testware.test/api/v1/location'));
@@ -353,7 +401,7 @@ Request request = new Request.Builder()
   .url("testware.test/api/v1/location")
   .method("POST", body)
   .addHeader("Accept", "application/json")
-  .addHeader("Authorization", "Bearer gMJtXnxgwWgQaIYGP5SVGGEzelWh6wBB9PvjJpMiomOQNpLOVc57Cw0QS40ejFCnV23u33DFM8yHilIi")
+  .addHeader("Authorization", "Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
   .addHeader("Content-Type", "application/json")
   .build();
 Response response = client.newCall(request).execute();</code></pre>
@@ -364,53 +412,45 @@ Response response = client.newCall(request).execute();</code></pre>
 
 
     <h2 id="api-token-make">API Token herstellen</h2>
-    <div class="row">
-        <div class="col-md-6">
-            <p>Sie können einen API-Token für Ihr Benutzerkonto einfach in der eigenen Kontoübersicht herstellen. Hierzu melden Sie sich in der testWare an. Anschließend klicken auf Ihren Benutzernamen in der oberen rechten Ecke. Aus dem Menü wählen Sie den Eintrag
-                <x-code type="dark">Mein Konto <i class="fas fa-user"></i></x-code>
-                aus.
-            </p>
-        </div>
-        <div class="col-md-6">
-            <img src="https://demo.testware.io/img/docu/api_token_step1.png"
-                 alt="Öffnen der Benutzerseite"
-                 class="img-fluid img-thumbnail"
-            >
-        </div>
-    </div>
-    <div class="row my-3">
-        <div class="col-md-6">
-            <p>In der Kontoübersicht finden Sie den Abschnitt
-                <strong>Token für API-Zugang</strong>. Wenn Sie noch keinen Token erstellt haben, wird ein Schalter
-                <x-code type="dark">Token für API erzeugen</x-code>
-                gezeigt. Mit einem Klick auf diesem Schalter wird der Token erstellt und dem Konto zugeordnet.
-            </p>
-        </div>
-        <div class="col-md-6">
-            <img src="https://demo.testware.io/img/docu/api_make_token.png"
-                 alt="API Token erstellen"
-                 class="img-fluid img-thumbnail"
-            >
-        </div>
-    </div>
-    <div class="row my-3">
-        <div class="col-md-6">
-            <p>Den Token können Sie aus dem Textfeld herauskopieren und für ihre jeweilige Anwendung verwenden.</p>
-            <p>Sollte es erforderlich sein, den Token neu ausstellen zu lassen, können Sie dies mit einem Klick auf den Schalter
-                <x-code type="dark"><i class="fas fa-redo-alt"></i></x-code>
-                erreichen.
-            </p>
-            <div class="duik-callout duik-callout-warning mb-5">
-                <h4 class="h5">Wichtiger Hinweis!</h4>
-                <p class="mb-0">Bitte beachten Sie, dass mit der Ausstellung eines neuen Tokens alle Zugriffe auf die testWare API mit dem neuen Token erfolgen müssen. Zugriffe mit dem alten Token werden abgewiesen. Der alte Token ist nicht mehr reproduzierbar.</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <img src="https://demo.testware.io/img/docu/api_show_token.png"
-                 alt="Anzeigen des API Token"
-                 class="img-fluid img-thumbnail"
-            >
-        </div>
-    </div>
 
+    <p>Sie können einen API-Token für Ihr Benutzerkonto einfach in der eigenen Kontoübersicht herstellen. Hierzu melden Sie sich in der testWare an. Anschließend klicken auf Ihren Benutzernamen in der oberen rechten Ecke. Aus dem Menü wählen Sie den Eintrag
+        <x-code type="dark">Mein Konto</x-code>
+        aus.
+    </p>
+
+    <img src="/assets/img/screenshots/Screen_user_open_account.png"
+         alt="Öffnen der Benutzerseite"
+         class="shadow"
+    >
+
+    <p>In der Kontoübersicht finden Sie weiter unten den Abschnitt
+        <strong>Token für API-Zugang</strong>. Wenn Sie noch keinen Token erstellt haben, wird ein Schalter
+        <x-code type="dark">Token für API erzeugen</x-code>
+        gezeigt. Mit einem Klick auf diesem Schalter wird der Token erstellt und dem Konto zugeordnet.
+    </p>
+
+    <img src="/assets/img/screenshots/Screenshot_User_Set_API_Token.png"
+         alt="API Token erstellen"
+         class="shadow"
+    >
+
+    <p>Den Token können Sie aus dem Textfeld herauskopieren und für ihre jeweilige Anwendung verwenden.</p>
+
+    <x-note type="danger">
+        <h4 class="text-xl">Kritischer Hinweis!</h4>
+        <p class="mb-0">Mit dem Token erhalten Sie, entsprechend Ihrem Benutzerprofil, vollen Zugriff auf die testWare. Sie sollten daher den Token nicht an andere verteilen.</p>
+    </x-note>
+
+    <p>Sollte es erforderlich sein, den Token neu ausstellen zu lassen, können Sie dies mit einem Klick auf den Schalter
+        <x-code type="dark"><x-icons.redo class="h-3 inline" /></x-code>
+        erreichen.
+    </p>
+    <img src="/assets/img/screenshots/Screenshot_User_View_API_Token.png"
+         alt="Anzeigen des API Token"
+         class="shadow"
+    >
+    <x-note type="warning">
+        <h4 class="text-xl">Wichtiger Hinweis!</h4>
+        <p class="mb-0">Bitte beachten Sie, dass mit der Ausstellung eines neuen Tokens alle Zugriffe auf die testWare API mit dem neuen Token erfolgen müssen. Zugriffe mit dem alten Token werden abgewiesen. Der alte Token ist nicht mehr reproduzierbar.</p>
+    </x-note>
 @endsection

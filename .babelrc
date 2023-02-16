@@ -13,7 +13,8 @@
           "apacheconf",
           "python",
           "dart",
-          "java"
+          "java",
+          "shellsession"
         ],
         "css": true,
         "theme": "default",
