@@ -4,6 +4,14 @@ description: Von der Installation bis zum Regelbetrieb sind einige Prozesse impl
 reading-time: ~ 3min
 ---
 @extends('_layouts/documentation')
+@section('nav-docs')
+    <nav class="fixed bottom-0 top-0 w-52 right-0 bg-white border-l-2 rounded py-1 z-10 border border-main-100" x-show="shrinkNav">
+        <x-nav-doc-item link="general-processes-main-header">Prozesse</x-nav-doc-item>
+        <x-nav-doc-item link="general-processes-main-symbols">Symbole</x-nav-doc-item>
+    </nav>
+@endsection
+
+
 @section('content')
 
     <h1 id="general-processes-main-header">Prozesse</h1>
@@ -26,7 +34,7 @@ reading-time: ~ 3min
 
     <section class="grid grid-cols-3 gap-3">
         <figure class="col-span-1">
-            <x-processes.ask>Was?</x-processes.ask>
+            <x-processes.gate>?</x-processes.gate>
         </figure>
         <article class="col-span-2">
             <h3>Entscheidung</h3>

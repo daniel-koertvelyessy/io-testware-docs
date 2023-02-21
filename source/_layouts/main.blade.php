@@ -99,7 +99,6 @@
 
 <body class="flex flex-col justify-between min-h-screen bg-main-50 text-slate-800 leading-normal font-sans"
       id="top"
-
 >
 <div id="app"
      x-data="{ showResonsiveMenu: false, showsubmen: false, shrinkNav: false }"
@@ -133,7 +132,9 @@
         @yield('body')
     </main>
 
-    <nav class="fixed bottom-6 right-4 bg-main-50 rounded px-2 py-1" x-show="shrinkNav">
+@yield('nav-docs')
+
+    <nav class="fixed bottom-6 right-4 bg-main-50 rounded px-2 py-1 z-10 border border-main-100" x-show="shrinkNav">
         <a href="#top">top</a>
     </nav>
     <footer class=""
