@@ -43,6 +43,7 @@
         'API'          => [
             'url'      => 'docs/1.7/api-main',
             'children' => [
+                'Endpunkte'      => 'docs/1.7/api-endpoints',
                 'Standorte'      => 'docs/1.7/api-locations',
                 'Produkte'       => 'docs/1.7/api-productsn',
                 'Organisationen' => 'docs/1.7/api-organisatio',
