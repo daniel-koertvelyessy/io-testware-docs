@@ -14,7 +14,8 @@
           "python",
           "dart",
           "java",
-          "shellsession"
+          "shellsession",
+          "yaml"
         ],
         "css": true,
         "theme": "default",

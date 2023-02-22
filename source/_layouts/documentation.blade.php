@@ -34,6 +34,7 @@
             >
                 @yield('content')
             </div>
+            @yield('nav-docs')
         </div>
     </section>
 @endsection

@@ -17,7 +17,6 @@ Prism.highlightAll();
 import Alpine from 'alpinejs'
 
 window.Alpine = Alpine
-
 Alpine.start()
 
 Vue.config.productionTip = false;

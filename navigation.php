@@ -13,7 +13,7 @@
         'Installation' => [
             'url'      => 'docs/1.7/installation-main',
             'children' => [
-                'LAPP'   => 'docs/1.7/installation-lapp',
+                'LAPP'   => 'docs/1.7/installation-lemp',
                 'Docker' => 'docs/1.7/installation-docker',
             ]
         ],

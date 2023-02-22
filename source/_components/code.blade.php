@@ -12,4 +12,4 @@
             ]
 ])
 
-<span {{ $attributes->merge(['class'=>"font-semibold text-xs rounded px-1 py-0.5 flex-inline items-center justify-center $typeclasses[$type]"]) }}>{{ $slot }}</span>
+<span {{ $attributes->merge(['class'=>"font-semibold whitespace-nowrap text-xs rounded px-1 py-0.5 flex-inline items-center justify-center $typeclasses[$type]"]) }}>{{ $slot }}</span>

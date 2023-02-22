@@ -14,9 +14,13 @@
           content="{{ $page->description ?? $page->siteDescription }}"
     >
 
-    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale"
+          content="de_DE"
+    />
 
-    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate"
+          content="en_US"
+    />
 
     <meta property="og:site_name"
           content="{{ $page->siteName }}"
@@ -93,7 +97,7 @@
     @endif
 
     <style>
-       
+
     </style>
 </head>
 
@@ -132,10 +136,14 @@
         @yield('body')
     </main>
 
-@yield('nav-docs')
 
-    <nav class="fixed bottom-6 right-4 bg-main-50 rounded px-2 py-1 z-10 border border-main-100" x-show="shrinkNav">
-        <a href="#top">top</a>
+    <nav class="fixed bottom-0 right-0 sm:bottom-6 sm:right-4 bg-main-700 rounded px-2 py-1 z-10 border border-main-100"
+         x-show="shrinkNav"
+    >
+        <a href="#top"
+           class="no-underline text-slate-50 hover:text-slate-50 hover:underline"
+           onclick="document.getElementById('docsnavselect').value = 'top'"
+        >top</a>
     </nav>
     <footer class=""
             role="contentinfo"

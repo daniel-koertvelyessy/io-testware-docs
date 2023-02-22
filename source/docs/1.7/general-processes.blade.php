@@ -5,13 +5,46 @@ reading-time: ~ 3min
 ---
 @extends('_layouts/documentation')
 @section('nav-docs')
-    <nav class="fixed bottom-0 top-0 w-52 right-0 bg-white border-l-2 rounded py-1 z-10 border border-main-100" x-show="shrinkNav">
-        <x-nav-doc-item link="general-processes-main-header">Prozesse</x-nav-doc-item>
-        <x-nav-doc-item link="general-processes-main-symbols">Symbole</x-nav-doc-item>
-    </nav>
+    @php
+
+        $navigation = [
+            [
+                'link' => 'general-processes-main-header',
+                'header' => 'Prozesse'
+            ],
+            [
+                'link' => 'general-processes-main-symbols',
+                'header' => 'Symbole'
+            ],
+            [
+                'link' => 'general-processes-initial-flow',
+                'header' => 'Globaler Ablauf'
+            ],
+            [
+                'link' => 'general-processes-main-install',
+                'header' => 'Installation'
+            ],
+            [
+                'link' => 'general-processes-main-setup',
+                'header' => 'Einrichtung'
+            ],
+            [
+                'link' => 'general-processes-main-prepare',
+                'header' => 'Verwaltung'
+            ],
+            [
+                'link' => 'general-processes-main-equipment',
+                'header' => 'Geräte'
+            ],
+            [
+                'link' => 'general-processes-main-controlling',
+                'header' => 'Prüfungen'
+            ],
+    ];
+
+    @endphp
+    <x-nav-docs :items="$navigation" />
 @endsection
-
-
 @section('content')
 
     <h1 id="general-processes-main-header">Prozesse</h1>
@@ -42,32 +75,32 @@ reading-time: ~ 3min
         </article>
     </section>
 
-
-
     <h2 id="general-processes-initial-flow">Globaler Ablauf</h2>
     <p>Wie so viele Datenbankapplikationen muss auch die testWare installiert, eingerichtet und mit Daten gefüllt werden, damit die eigentliche Aufgabe wahrgenommen werden kann.</p>
-    <p>Der Ablauf ist eigentlich sehr linear:</p>
-    <x-processes.task>
-        <a href="#general-processes-main-install">Installation</a>
-    </x-processes.task>
-    <x-processes.arrow-down/>
-    <x-processes.task>
-        <a href="#general-processes-main-setup">Einrichtung</a>
-    </x-processes.task>
-    <x-processes.arrow-down/>
-    <x-processes.task>
-        <a href="#general-processes-main-prepare">Verwaltung</a>
-    </x-processes.task>
-    <x-processes.arrow-down/>
+    <p>Der Ablauf folgt dem linearen Prozess:</p>
+    <figure class="w-80">
+        <x-processes.task>
+            <a href="#general-processes-main-install">Installation</a>
+        </x-processes.task>
+        <x-processes.arrow-down/>
+        <x-processes.task>
+            <a href="#general-processes-main-setup">Einrichtung</a>
+        </x-processes.task>
+        <x-processes.arrow-down/>
+        <x-processes.task>
+            <a href="#general-processes-main-prepare">Verwaltung</a>
+        </x-processes.task>
+        <x-processes.arrow-down/>
 
-    <x-processes.task>
-        <a href="#general-processes-main-equipment">Geräte</a>
-    </x-processes.task>
-    <x-processes.arrow-down/>
+        <x-processes.task>
+            <a href="#general-processes-main-equipment">Geräte</a>
+        </x-processes.task>
+        <x-processes.arrow-down/>
 
-    <x-processes.task>
-        <a href="#general-processes-main-controlling">Prüfungen</a>
-    </x-processes.task>
+        <x-processes.task>
+            <a href="#general-processes-main-controlling">Prüfungen</a>
+        </x-processes.task>
+    </figure>
     <hr>
     <h3 id="general-processes-main-install">Installation</h3>
     <p>Als Erstes muss natürlich die testWare auf ihrem System/Server installiert werden. Dies kann über Containeranwendungen wie Docker, Podman etc. oder traditionell mit Web- und Datenbankserver realisiert werden.</p>
@@ -78,8 +111,7 @@ reading-time: ~ 3min
     <hr>
     <h3 id="general-processes-main-setup">Einrichtung</h3>
     <p>Ist die Installation erfolgt, werden Benutzer und Ihre Rollen angelegt. Dazu besteht auch die Möglichkeit, den E-Mail Versand einzurichten.</p>
-    <p>Möchten man die testWare vor Ort zunächst testen, kann mit dem Konsolenbefehl <x-code type="dark">php artisan testware:demoseeder</x-code> Demodaten generieren lassen. Weitere Konsolenbefehle sind im Abschnitt <a href="/docs/1.7/system-scripts">testware Skripte</a> zu finden.</p>
-    <hr>
+    <p>Möchten man die testWare vor Ort zunächst testen, können in der Konsole mit dem testWare Befehl <x-code type="dark">php artisan testware:demoseeder</x-code> Demodaten generiert werden. Weitere Konsolenbefehle sind im Abschnitt <a href="/docs/1.7/system-scripts">testware Skripte</a> zu finden.</p>
 
     <section class="grid grid-cols-6 gap-3">
 
@@ -113,6 +145,13 @@ reading-time: ~ 3min
 
     </section>
 
+    <hr>
+    <h3 id="general-processes-main-equipment">Geräte</h3>
 
+
+    <hr>
+    <h3 id="general-processes-main-controlling">Prüfungen</h3>
+
+    <hr>
 
 @endsection
