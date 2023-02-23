@@ -4,71 +4,313 @@ description: Diese Seite zeigt die grundlegeneden Funktionen einer API. Anhand v
 reading-time: ~ 10min
 ---
 @php
+
     $navigation = [
+        [
+            'link' => 'api-location-header',
+            'header' => 'Standorte'
+],
                 [
                     'link' => 'locations',
                     'header' => 'Betriebe'
                 ],
                 [
+                    'link' => 'endpoint-get-locations',
+                    'header' => 'get::/locations',
+                    'level' => 3,
+                ],
+                [
+                    'link' => 'endpoint-get-locations_list_full',
+                    'header' => 'get::/location_list_full',
+                    'level' => 3,
+                ],
+                [
+                    'link' => 'endpoint-get-locations_id',
+                    'header' => 'get::/locations/{id}',
+                    'level' => 3,
+                ],
+                [
+                    'link' => 'endpoint-post-locations',
+                    'header' => 'post::/locations',
+                    'level' => 3,
+                ],
+                [
+                    'link' => 'endpoint-put-locations_id',
+                    'header' => 'put::/locations/{id}',
+                    'level' => 3,
+                ],
+                [
+                    'link' => 'endpoint-delete-locations_id',
+                    'header' => 'delete::/locations/{id}',
+                    'level' => 3,
+                ],
+                [
                     'link' => 'buildings',
                     'header' => 'Gebäude'
+                ],
+                 [
+                    'link' => 'endpoint-get-buildings',
+                    'level' => 3,
+                    'header' => 'get::/buildings',
+                ],
+                [
+                    'link' => 'endpoint-get-buildings_list_full',
+                    'level' => 3,
+                    'header' => 'get::/buildings_list_full',
+                ],
+                [
+                    'link' => 'endpoint-get-buildings_id',
+                    'level' => 3,
+                    'header' => 'get::/buildings/{id}',
+                ],
+                [
+                    'link' => 'endpoint-post-buildings',
+                    'level' => 3,
+                    'header' => 'post::/buildings',
+                ],
+                [
+                    'link' => 'endpoint-put-buildings_id',
+                    'level' => 3,
+                    'header' => 'put::/buildings/{id}',
+                ],
+                [
+                    'link' => 'endpoint-delete-buildings_id',
+                    'level' => 3,
+                    'header' => 'delete::/buildings/{id}',
                 ],
                 [
                     'link' => 'rooms',
                     'header' => 'Räume'
                 ],
                 [
+                    'link' => 'endpoint-get-rooms',
+                    'level' => 3,
+                    'header' => 'get::/rooms',
+                ],
+                [
+                    'link' => 'endpoint-get-rooms_list_full',
+                    'level' => 3,
+                    'header' => 'get::/rooms_list_full',
+                ],
+                [
+                    'link' => 'endpoint-get-rooms_id',
+                    'level' => 3,
+                    'header' => 'get::/rooms/{id}',
+                ],
+                [
+                    'link' => 'endpoint-post-rooms',
+                    'level' => 3,
+                    'header' => 'post::/rooms',
+                ],
+                [
+                    'link' => 'endpoint-put-rooms_id',
+                    'level' => 3,
+                    'header' => 'put::/rooms/{id}',
+                ],
+                [
+                    'link' => 'endpoint-delete-rooms_id',
+                    'level' => 3,
+                    'header' => 'delete::/rooms/{id}',
+                ],
+                [
                     'link' => 'compartments',
                     'header' => 'Stellplätze'
+                ],
+                [
+                    'link' => 'endpoint-get-compartments',
+                    'level' => 3,
+                    'header' => 'get::/compartments',
+                ],
+                [
+                    'link' => 'endpoint-get-compartments_list_full',
+                    'level' => 3,
+                    'header' => 'get::/compartments_list_full',
+                ],
+                [
+                    'link' => 'endpoint-get-compartments_id',
+                    'level' => 3,
+                    'header' => 'get::/compartments/{id}',
+                ],
+                [
+                    'link' => 'endpoint-post-compartments',
+                    'level' => 3,
+                    'header' => 'post::/compartments',
+                ],
+                [
+                    'link' => 'endpoint-put-compartments_id',
+                    'level' => 3,
+                    'header' => 'put::/compartments/{id}',
+                ],
+                [
+                    'link' => 'endpoint-delete-compartments_id',
+                    'level' => 3,
+                    'header' => 'delete::/compartments/{id}',
                 ],
         ];
 
     $locationlist = [
         [
-            'link' => 'endpoint-get-api-v1-location',
+            'link' => 'endpoint-get-locations',
             'request' => 'get',
-            'endpoint' => '/api/v1/locations',
+            'endpoint' => '/locations',
         ],
         [
-            'link' => 'endpoint-get-location_list_complete',
+            'link' => 'endpoint-get-locations_list_full',
             'request' => 'get',
-            'endpoint' => '/api/v1/location_list_complete',
+            'endpoint' => '/location_list_complete',
         ],
         [
-            'link' => 'endpoint-get-location_id',
+            'link' => 'endpoint-get-locations_id',
             'request' => 'get',
-            'endpoint' => '/api/v1/locations/{id}',
+            'endpoint' => '/locations/{id}',
         ],
         [
-            'link' => 'endpoint-post-location',
+            'link' => 'endpoint-post-locations',
             'request' => 'post',
-            'endpoint' => '/api/v1/locations',
+            'endpoint' => '/locations',
         ],
         [
-            'link' => 'endpoint-put-location_id',
+            'link' => 'endpoint-put-locations_id',
             'request' => 'put',
-            'endpoint' => '/api/v1/locations/{id}',
+            'endpoint' => '/locations/{id}',
         ],
         [
-            'link' => 'endpoint-delete-location_id',
+            'link' => 'endpoint-delete-locations_id',
             'request' => 'delete',
-            'endpoint' => '/api/v1/locations/{id}',
+            'endpoint' => '/locations/{id}',
         ],
 ];
+
+    $buildingslist = [
+        [
+            'link' => 'endpoint-get-buildings',
+            'request' => 'get',
+            'endpoint' => '/buildings',
+        ],
+        [
+            'link' => 'endpoint-get-buildings_list_full',
+            'request' => 'get',
+            'endpoint' => '/buildings_list_full',
+        ],
+        [
+            'link' => 'endpoint-get-buildings_id',
+            'request' => 'get',
+            'endpoint' => '/buildings/{id}',
+        ],
+        [
+            'link' => 'endpoint-post-buildings',
+            'request' => 'post',
+            'endpoint' => '/buildings',
+        ],
+        [
+            'link' => 'endpoint-put-buildings_id',
+            'request' => 'put',
+            'endpoint' => '/buildings/{id}',
+        ],
+        [
+            'link' => 'endpoint-delete-buildings_id',
+            'request' => 'delete',
+            'endpoint' => '/buildings/{id}',
+        ],
+];
+
+    $roomslist = [
+        [
+            'link' => 'endpoint-get-rooms',
+            'request' => 'get',
+            'endpoint' => '/rooms',
+        ],
+        [
+            'link' => 'endpoint-get-rooms_list_full',
+            'request' => 'get',
+            'endpoint' => '/rooms_list_full',
+        ],
+        [
+            'link' => 'endpoint-get-rooms_id',
+            'request' => 'get',
+            'endpoint' => '/rooms/{id}',
+        ],
+        [
+            'link' => 'endpoint-post-rooms',
+            'request' => 'post',
+            'endpoint' => '/rooms',
+        ],
+        [
+            'link' => 'endpoint-put-rooms_id',
+            'request' => 'put',
+            'endpoint' => '/rooms/{id}',
+        ],
+        [
+            'link' => 'endpoint-delete-rooms_id',
+            'request' => 'delete',
+            'endpoint' => '/rooms/{id}',
+        ],
+];
+
+    $compartmentslist=[
+         [
+            'link' => 'endpoint-get-compartments',
+            'request' => 'get',
+            'endpoint' => '/compartments',
+        ],
+        [
+            'link' => 'endpoint-get-compartments_list_full',
+            'request' => 'get',
+            'endpoint' => '/rooms_list_full',
+        ],
+        [
+            'link' => 'endpoint-get-compartments_id',
+            'request' => 'get',
+            'endpoint' => '/compartments/{id}',
+        ],
+        [
+            'link' => 'endpoint-post-compartments',
+            'request' => 'post',
+            'endpoint' => '/compartments',
+        ],
+        [
+            'link' => 'endpoint-put-compartments_id',
+            'request' => 'put',
+            'endpoint' => '/compartments/{id}',
+        ],
+        [
+            'link' => 'endpoint-delete-compartments_id',
+            'request' => 'delete',
+            'endpoint' => '/compartments/{id}',
+        ],
+];
+
 @endphp
 @extends('_layouts/documentation')
 @section('content')
     <x-nav-docs :items="$navigation" />
-    <h1>Verwaltung</h1>
+    <h1 id="api-location-header">Standorte</h1>
+    <p></p>
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <x-overview-item header="Betrieb" link="#locations">
+            Das Sammelobjekt, welches mit einer Adresse und Leitung angelegt wird.
+        </x-overview-item>
+        <x-overview-item header="Gebäude" link="#buildings">
+            In jedem Betrieb können mehrere Gebäude angelegt werden.
+        </x-overview-item>
+        <x-overview-item header="Raum" link="#rooms">
+            In den Gebäuden können wiederum Räume angelegt werden.
+        </x-overview-item>
+        <x-overview-item header="Stellplatz" link="#compartments">
+            Als kleinste Einheit ist der Stellplatz vorgesehen. Das kann ein Lagerfach, Tisch oder Schulbade sein.
+        </x-overview-item>
+    </section>
+    <hr>
     <section id="locations">
-        <h2>Betriebe</h2>
+        <h2>Betrieb</h2>
         <p>Folgende Endpunkte sind verfügbar:</p>
         <x-endpoint-list :items="$locationlist" />
-        <article id="endpoint-get-api-v1-location" class="mt-3">
+        <hr>
+        <article id="endpoint-get-locations" class="mt-3">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <x-code>/api/v1/locations</x-code>
+                    <x-code type="key">/locations</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -100,32 +342,31 @@ reading-time: ~ 10min
                 <dd class="api-dd">
                     <x-api-tabs open="response">
                         <x-slot:request>-</x-slot:request>
-                        <x-slot:response><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">[</span>
-    <span class="token punctuation">{</span>
-        <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2020-12-29 11:30:16"</span><span class="token punctuation">,</span>
-        <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-03 19:10:04"</span><span class="token punctuation">,</span>
-        <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"784f64bc-735a-3d2f-8a06-fcf3d47621f3"</span><span class="token punctuation">,</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"HQbln153"</span><span class="token punctuation">,</span>
-        <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"bln153"</span><span class="token punctuation">,</span>
-        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Hauptsitz der Firma Testfirma GmbH"</span><span class="token punctuation">,</span>
-        <span class="token property">"address_id"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-        <span class="token property">"employee_id"</span><span class="token operator">:</span> <span class="token number">4</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>...<span class="token punctuation">}</span>
-<span class="token punctuation">]</span>
+                        <x-slot:response><pre class="language-json"><code class=" language-json">[
+    {
+        "id": 1,
+        "created": "2020-12-29 11:30:16",
+        "updated": "2021-01-03 19:10:04",
+        "uid": "784f64bc-735a-3d2f-8a06-fcf3d47621f3",
+        "name": "HQbln153",
+        "label": "bln153",
+        "description": "Hauptsitz der Firma Testfirma GmbH",
+        "address_id": 2,
+        "employee_id": 4
+    },
+    {...}
+]
                                 </code></pre></x-slot:response>
                     </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-get-location_list_complete" class="mt-3">
+        <article id="endpoint-get-locations_list_full" class="mt-3">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <x-code>/api/v1/location_list_complete</x-code>
+                    <x-code type="key">/location_list_full</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -163,59 +404,58 @@ reading-time: ~ 10min
                     <x-api-tabs open="response">
                         <x-slot:request>-</x-slot:request>
                         <x-slot:response>
-                            <pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">[</span>
-    <span class="token punctuation">{</span>
-        <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2020-12-29 11:30:16"</span><span class="token punctuation">,</span>
-        <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-03 19:10:04"</span><span class="token punctuation">,</span>
-        <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"784f64bc-735a-3d2f-8a06-fcf3d47621f3"</span><span class="token punctuation">,</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"HQbln153"</span><span class="token punctuation">,</span>
-        <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"bln153"</span><span class="token punctuation">,</span>
-        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Hauptsitz der Firma Testfirma GmbH"</span><span class="token punctuation">,</span>
-        <span class="token property">"address"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token property">"type"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-                <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Heimadress"</span><span class="token punctuation">,</span>
-                <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Standard Adresse"</span>
-            <span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"Gmb5423212"</span><span class="token punctuation">,</span>
-            <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Deckerweg 5/8 15868 Neukirchen-Vluyn"</span><span class="token punctuation">,</span>
-            <span class="token property">"company"</span><span class="token operator">:</span> <span class="token string">"Testfirma GmbH"</span><span class="token punctuation">,</span>
-            <span class="token property">"company_2"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-            <span class="token property">"company_co"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-            <span class="token property">"company_unloading_point"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-            <span class="token property">"company_goods_income"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-            <span class="token property">"company_division"</span><span class="token operator">:</span> <span class="token string">"UWTZIZ79"</span><span class="token punctuation">,</span>
-            <span class="token property">"street"</span><span class="token operator">:</span> <span class="token string">"Christiane-Brandt-Platz"</span><span class="token punctuation">,</span>
-            <span class="token property">"no"</span><span class="token operator">:</span> <span class="token string">"67"</span><span class="token punctuation">,</span>
-            <span class="token property">"zip"</span><span class="token operator">:</span> <span class="token string">"63550"</span><span class="token punctuation">,</span>
-            <span class="token property">"city"</span><span class="token operator">:</span> <span class="token string">"Bruchsal"</span><span class="token punctuation">,</span>
-            <span class="token property">"floor"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-            <span class="token property">"enterance"</span><span class="token operator">:</span> <span class="token null keyword">null</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token property">"manager"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token property">"first_name"</span><span class="token operator">:</span> <span class="token string">"Lenard"</span><span class="token punctuation">,</span>
-            <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Hammer"</span><span class="token punctuation">,</span>
-            <span class="token property">"name_2"</span><span class="token operator">:</span> <span class="token string">"Herr Lenard H"</span><span class="token punctuation">,</span>
-            <span class="token property">"employee_number"</span><span class="token operator">:</span> <span class="token string">"1187"</span><span class="token punctuation">,</span>
-            <span class="token property">"date_birth"</span><span class="token operator">:</span> <span class="token string">"1972-09-03"</span><span class="token punctuation">,</span>
-            <span class="token property">"date_entry"</span><span class="token operator">:</span> <span class="token string">"2007-10-12"</span><span class="token punctuation">,</span>
-            <span class="token property">"date_leave"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-            <span class="token property">"phone"</span><span class="token operator">:</span> <span class="token string">"0808862546"</span><span class="token punctuation">,</span>
-            <span class="token property">"mobile"</span><span class="token operator">:</span> <span class="token string">"+5211706111601"</span><span class="token punctuation">,</span>
-            <span class="token property">"fax"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-            <span class="token property">"com_1"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-            <span class="token property">"com_2"</span><span class="token operator">:</span> <span class="token null keyword">null</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token property">"location_objects"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token property">"buildings"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-            <span class="token property">"rooms"</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-            <span class="token property">"compartments"</span><span class="token operator">:</span> <span class="token number">18</span><span class="token punctuation">,</span>
-            <span class="token property">"equipment"</span><span class="token operator">:</span> <span class="token number">738</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>...<span class="token punctuation">}</span>
-<span class="token punctuation">]</span>
+                            <pre class=" language-json"><code class=" language-json">[
+    {
+        "id": 1,
+        "created": "2020-12-29 11:30:16",
+        "updated": "2021-01-03 19:10:04",
+        "uid": "784f64bc-735a-3d2f-8a06-fcf3d47621f3",
+        "name": "HQbln153",
+        "label": "bln153",
+        "description": "Hauptsitz der Firma Testfirma GmbH",
+        "address": {
+            "type": {
+                "name": "Heimadress",
+                "description": "Standard Adresse"
+            },
+            "label": "Gmb5423212",
+            "name": "Deckerweg 5/8 15868 Neukirchen-Vluyn",
+            "company": "Testfirma GmbH",
+            "company_2": null,
+            "company_co": null,
+            "company_unloading_point": null,
+            "company_goods_income": null,
+            "company_division": "UWTZIZ79",
+            "street": "Christiane-Brandt-Platz",
+            "no": "67",
+            "zip": "63550",
+            "city": "Bruchsal",
+            "floor": null,
+            "enterance": null
+        },
+        "manager": {
+            "first_name": "Lenard",
+            "name": "Hammer",
+            "name_2": "Herr Lenard H",
+            "employee_number": "1187",
+            "date_birth": "1972-09-03",
+            "date_entry": "2007-10-12",
+            "date_leave": null,
+            "phone": "0808862546",
+            "mobile": "+5211706111601",
+            "fax": null,
+            "com_1": null,
+            "com_2": null
+        },
+        "location_objects": {
+            "buildings": 2,
+            "rooms": 5,
+            "compartments": 18,
+            "equipment": 738
+        }
+    },
+    {...}
+]
                             </code></pre>
                         </x-slot:response>
                     </x-api-tabs>
@@ -223,18 +463,17 @@ reading-time: ~ 10min
             </dl>
         </article>
         <hr>
-        <article id="endpoint-get-location_id" class="mt-3">
+        <article id="endpoint-get-locations_id" class="mt-3">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <x-code>/api/v1/locations/{id}</x-code>
+                    <x-code type="key">/locations/{id}</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Variable</dt>
                 <dd class="api-dd">
-                    <x-code>id</x-code>
-                    <x-code type="dark">INTEGER</x-code>
+                    <x-api-key key="id" type="Integer" noborder="true" />
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -261,17 +500,16 @@ reading-time: ~ 10min
                     <x-api-tabs open="response">
                         <x-slot:request>-</x-slot:request>
                         <x-slot:response>
-                            <pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2020-12-29 11:30:16"</span><span class="token punctuation">,</span>
-    <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-03 19:10:04"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"784f64bc-735a-3d2f-8a06-fcf3d47621f3"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"HQbln153"</span><span class="token punctuation">,</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"bln153"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Hauptsitz der Firma Testfirma GmbH"</span><span class="token punctuation">,</span>
-    <span class="token property">"address_id"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-    <span class="token property">"employee_id"</span><span class="token operator">:</span> <span class="token number">4</span>
-<span class="token punctuation">}</span>
+                            <pre class=" language-json"><code class=" language-json">{
+    "created": "2020-12-29 11:30:16",
+    "updated": "2021-01-03 19:10:04",
+    "uid": "784f64bc-735a-3d2f-8a06-fcf3d47621f3",
+    "name": "HQbln153",
+    "label": "bln153",
+    "description": "Hauptsitz der Firma Testfirma GmbH",
+    "address_id": 2,
+    "employee_id": 4
+}
                             </code></pre>
                         </x-slot:response>
                     </x-api-tabs>
@@ -279,11 +517,11 @@ reading-time: ~ 10min
             </dl>
         </article>
         <hr>
-        <article id="endpoint-post-location" class="mt-3">
+        <article id="endpoint-post-locations" class="mt-3">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <x-code>/api/v1/locations</x-code>
+                    <x-code type="key">/locations</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -310,322 +548,122 @@ reading-time: ~ 10min
                     <p>Erforderliche Felder</p>
                     <x-api-key key="label" type="string" />
 
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>label</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                    </ul>
+                    <x-api-optionals>
+                        <x-api-key key="name" type="STRING" />
+                        <x-api-key key="description" type="STRING" />
+                        <x-api-key key="uid" type="STRING" />
+                        <x-api-key key="address" type="OBJECT" />
+                        <x-api-key key="employee" type="OBJECT" />
 
-                    <x-api-optionals></x-api-optionals>
+                        <p class="pl-2">Wird das Objekt <x-code type="key">address</x-code> verwendet, sind folgende Felder erforderlich</p>
+                        <x-api-key key="address.label" type="STRING" />
+                        <x-api-key key="address.street" type="STRING" />
+                        <x-api-key key="address.no" type="STRING" />
+                        <x-api-key key="address.zip" type="STRING" />
+                        <x-api-key key="address.city" type="STRING" />
 
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#locations_optionals"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="locations_optionals"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="locations_optionals"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>name</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>description</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>uid</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>address</code>
-                                <span class="badge badge-dark-soft">OBJECT</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>employee</code>
-                                <span class="badge badge-dark-soft">OBJECT</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <p class="mt-3">Wird das Objekt <code>address</code> verwendet, sind folgende Felder erforderlich
-                    </p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>address.label</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>address.street</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>address.no</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>address.zip</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>address.city</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                    </ul>
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#address_optionals"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="address_optionals"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="address_optionals"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>address.address_type</code>
-                                <span class="badge badge-dark-soft">OBJECT</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>address.name</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>address.company</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>address.company_2</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>address.company_co</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>address.company_unloading_point</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>address.company_goods_income</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>address.company_division</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                        </ul>
-                    </div>
+                        <p class="pl-2">Optionale Felder für das Objekt <x-code type="key">address</x-code></p>
+                        <x-api-key key="address.address_type" type="OBJECT" />
+                        <x-api-key key="address.name" type="STRING" />
+                        <x-api-key key="address.company" type="STRING" />
+                        <x-api-key key="address.company_2" type="STRING" />
+                        <x-api-key key="address.company_co" type="STRING" />
+                        <x-api-key key="address.company_unloading_point" type="STRING" />
+                        <x-api-key key="address.company_goods_income" type="STRING" />
+                        <x-api-key key="address.company_division" type="STRING" />
 
-                    <p class="mt-3">Wird das Objekt <code>employee</code> verwendet, sind folgende Felder erforderlich
-                    </p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>employee.name</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                    </ul>
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#employees_optionals"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="employees_optionals"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="employees_optionals"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>employee.first_name</code>
-                                <span>
-                                            </span>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>employee.name_2</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>employee.date_birth</code>
-                                <span>
-                                                <span class="badge badge-dark-soft">Datum</span> <code>2023-02-22</code>
-                                            </span>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>employee.employee_number</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>employee.date_entry</code>
-                                <span>
-                                                <span class="badge badge-dark-soft">Datum</span> <code>2023-02-22</code>
-                                            </span>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>employee.date_leave</code>
-                                <span>
-                                                <span class="badge badge-dark-soft">Datum</span> <code>2023-02-22</code>
-                                            </span>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>employee.phone</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>employee.mobile</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>employee.fax</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>employee.com_1</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>employee.com_2</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                        </ul>
-                    </div>
+                        <p class="pl-2">Wird das Objekt <x-code type="key">employee</x-code> verwendet, sind folgende Felder erforderlich</p>
+                        <x-api-key key="employee.name" type="STRING" />
+
+                        <p class="pl-2">Optionale Felder für das Objekt <x-code type="key">employee</x-code></p>
+                        <x-api-key key="employee.first_name" type="STRING" />
+                        <x-api-key key="employee.name_2" type="STRING" />
+                        <x-api-key key="employee.date_birth" type="Datum"/>
+                        <x-api-key key="employee.employee_number" type="string" />
+                        <x-api-key key="employee.date_entry" type="Datum" />
+                        <x-api-key key="employee.date_leave" type="Datum" />
+                        <x-api-key key="employee.phone" type="STRING" />
+                        <x-api-key key="employee.mobile" type="STRING" />
+
+                    </x-api-optionals>
+
+
+
+
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_post_location-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_post_location-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_post_location-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_post_location-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_post_location-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_post_location-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_post_location-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_post_location-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_post_location-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_post_location-docs-tab-scheme"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Loc-bln153"</span><span class="token punctuation">,</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"bln153"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Nihil aut qui nostrum ..."</span><span class="token punctuation">,</span>
-    <span class="token property">"address"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">"street"</span><span class="token operator">:</span> <span class="token string">"Christiane-Brandt-Platz"</span><span class="token punctuation">,</span>
-        <span class="token property">"no"</span><span class="token operator">:</span> <span class="token string">"67"</span><span class="token punctuation">,</span>
-        <span class="token property">"zip"</span><span class="token operator">:</span> <span class="token string">"63550"</span><span class="token punctuation">,</span>
-        <span class="token property">"city"</span><span class="token operator">:</span> <span class="token string">"Bruchsal"</span><span class="token punctuation">,</span>
-        <span class="token property">"address_type"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token property">"name"</span> <span class="token operator">:</span> <span class="token string">"Hausadresse"</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"Gmb5423212"</span><span class="token punctuation">,</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Hausadresse Barth GmbH"</span><span class="token punctuation">,</span>
-        <span class="token property">"company"</span><span class="token operator">:</span> <span class="token string">"Barth GmbH"</span><span class="token punctuation">,</span>
-        <span class="token property">"company_2"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-        <span class="token property">"company_co"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-        <span class="token property">"company_unloading_point"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-        <span class="token property">"company_goods_income"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-        <span class="token property">"company_division"</span><span class="token operator">:</span> <span class="token string">"UWTZIZ79"</span><span class="token punctuation">,</span>
-        <span class="token property">"floor"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-        <span class="token property">"enterance"</span><span class="token operator">:</span> <span class="token null keyword">null</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token property">"employee"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">"first_name"</span><span class="token operator">:</span> <span class="token string">"Anja"</span><span class="token punctuation">,</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Janssen"</span><span class="token punctuation">,</span>
-        <span class="token property">"name_2"</span><span class="token operator">:</span> <span class="token string">"Fleischer"</span><span class="token punctuation">,</span>
-        <span class="token property">"date_birth"</span><span class="token operator">:</span> <span class="token string">"2001-10-04"</span><span class="token punctuation">,</span>
-        <span class="token property">"employee_number"</span><span class="token operator">:</span> <span class="token string">"1526"</span><span class="token punctuation">,</span>
-        <span class="token property">"date_entry"</span><span class="token operator">:</span> <span class="token string">"2013-06-05"</span><span class="token punctuation">,</span>
-        <span class="token property">"date_leave"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-        <span class="token property">"phone"</span><span class="token operator">:</span> <span class="token string">"+496180690281"</span><span class="token punctuation">,</span>
-        <span class="token property">"mobile"</span><span class="token operator">:</span> <span class="token string">"+496180690281"</span><span class="token punctuation">,</span>
-        <span class="token property">"fax"</span><span class="token operator">:</span> <span class="token string">"+496180690281"</span><span class="token punctuation">,</span>
-        <span class="token property">"com_1"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-        <span class="token property">"com_2"</span><span class="token operator">:</span> <span class="token null keyword">null</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+                    <x-api-tabs open="request">
+                        <x-slot:request>
+                            <pre class=" language-json"><code class=" language-json">{
+    "name": "Loc-bln153",
+    "label": "bln153",
+    "description": "Nihil aut qui nostrum ...",
+    "address": {
+        "street": "Christiane-Brandt-Platz",
+        "no": "67",
+        "zip": "63550",
+        "city": "Bruchsal",
+        "address_type": {
+            "name" : "Hausadresse"
+        },
+        "label": "Gmb5423212",
+        "name": "Hausadresse Barth GmbH",
+        "company": "Barth GmbH",
+        "company_2": null,
+        "company_co": null,
+        "company_unloading_point": null,
+        "company_goods_income": null,
+        "company_division": "UWTZIZ79",
+        "floor": null,
+        "enterance": null
+    },
+    "employee": {
+        "first_name": "Anja",
+        "name": "Janssen",
+        "name_2": "Fleischer",
+        "date_birth": "2001-10-04",
+        "employee_number": "1526",
+        "date_entry": "2013-06-05",
+        "date_leave": null,
+        "phone": "+496180690281",
+        "mobile": "+496180690281",
+        "fax": "+496180690281",
+        "com_1": null,
+        "com_2": null
+    }
+}
+
                                 </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_post_location-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_post_location-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"status"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"74fc7d7c-04ad-4f12-a5be-07111cd73679"</span><span class="token punctuation">,</span>
-    <span class="token property">"address"</span><span class="token operator">:</span> <span class="token number">34</span><span class="token punctuation">,</span>
-    <span class="token property">"employee"</span><span class="token operator">:</span> <span class="token number">6</span>
-<span class="token punctuation">}</span>
+                        </x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">{
+    "status": true,
+    "id": 3,
+    "uid": "74fc7d7c-04ad-4f12-a5be-07111cd73679",
+    "address": 34,
+    "employee": 6
+}
                                 </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-put-location_id">
+        <article id="endpoint-put-locations_id" class="mt-3">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/location/{id}</code>
+                    <x-code type="key">/location/{id}</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Variable</dt>
                 <dd class="api-dd">
-                    <code>id</code>
-                    <span class="ml-5 badge badge-dark-soft">INTEGER</span>
+                    <x-api-key key="id" type="Integer" noborder/>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -637,152 +675,70 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>PUT</code>
+                    <x-code type="put">PUT</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Felder</dt>
                 <dd class="api-dd">
                     <p>Erforderliche Felder</p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>label</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                    </ul>
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#locations_optionals"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="locations_optionals"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="locations_optionals"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>name</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>description</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>uid</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>address_id</code>
-                                <span class="badge badge-dark-soft">INTEGER</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>employee_id</code>
-                                <span class="badge badge-dark-soft">INTEGER</span>
-                            </li>
-                        </ul>
-                    </div>
+
+                    <x-api-key key="id" type="Integer" />
+                    <x-api-optionals>
+                        <x-api-key key="label" type="STRING" />
+                        <x-api-key key="name" type="STRING" />
+                        <x-api-key key="description" type="STRING" />
+                        <x-api-key key="uid" type="STRING" />
+                        <x-api-key key="address_id" type="Integer" />
+                        <x-api-key key="employee_id" type="Integer" />
+
+                    </x-api-optionals>
+
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_put_location_id-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_put_location_id-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_put_location_id-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_put_location_id-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_put_location_id-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_put_location_id-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_put_location_id-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_put_location_id-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_put_location_id-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_put_location_id-docs-tab-scheme"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"bln251"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"9f1cf9d5-370b-3413-a51c-c97c2308fe2b"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"quam-officiis-eligendi-veritatis"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Minima maxime omnis cupiditate quas..."</span><span class="token punctuation">,</span>
-    <span class="token property">"address_id"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-    <span class="token property">"employee_id"</span><span class="token operator">:</span> <span class="token number">4</span>
-<span class="token punctuation">}</span>
+                    <x-api-tabs open="request">
+                        <x-slot:request><pre class=" language-json"><code class=" language-json">{
+    "label": "bln251",
+    "uid": "9f1cf9d5-370b-3413-a51c-c97c2308fe2b",
+    "name": "quam-officiis-eligendi-veritatis",
+    "description": "Minima maxime omnis cupiditate quas...",
+    "address_id": 2,
+    "employee_id": 4
+} </code></pre>
+                        </x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">{
+    "id": 1,
+    "created": "2021-01-06 12:26:19",
+    "updated": "2021-01-06 18:41:57",
+    "label": "bln251",
+    "uid": "9f1cf9d5-370b-3413-a51c-c97c2308fe2b",
+    "name": "quam-officiis-eligendi-veritatis",
+    "description": "Minima maxime omnis cupiditate quas...",
+    "address_id": 2,
+    "employee_id": 4
+}
                                 </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_put_location_id-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_put_location_id-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-    <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 12:26:19"</span><span class="token punctuation">,</span>
-    <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 18:41:57"</span><span class="token punctuation">,</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"bln251"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"9f1cf9d5-370b-3413-a51c-c97c2308fe2b"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"quam-officiis-eligendi-veritatis"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Minima maxime omnis cupiditate quas..."</span><span class="token punctuation">,</span>
-    <span class="token property">"address_id"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-    <span class="token property">"employee_id"</span><span class="token operator">:</span> <span class="token number">4</span>
-<span class="token punctuation">}</span>
-                                </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-delete-location_id">
+        <article id="endpoint-delete-locations_id">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/location/{id}</code>
+                    <x-code type="key">/location/{id}</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Variable</dt>
                 <dd class="api-dd">
-                    <code>id</code>
-                    <span class="ml-5 badge badge-dark-soft">INTEGER</span>
+                    <x-api-key key="id" type="Integer" />
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -794,7 +750,7 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>DELETE</code>
+                    <x-code type="delete">DELETE</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -806,109 +762,29 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_delete_location_id-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_delete_location_id-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_delete_location_id-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_delete_location_id-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_delete_location_id-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_delete_location_id-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_delete_location_id-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_delete_location_id-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_delete_location_id-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_delete_location_id-docs-tab-scheme"
-                        >
-                            -
-                        </div>
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_delete_location_id-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_delete_location_id-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">{</span>
-    <span class="token property">"status"</span> <span class="token operator">:</span> <span class="token string">"location deleted"</span>
-<span class="token punctuation">}</span></code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="response">
+                        <x-slot:request>-</x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">{
+    "status": "location deleted"
+} </code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
     </section>
+    <hr>
     <section id="buildings">
         <h2>Gebäude</h2>
         <p>Folgende Endpunkte sind verfügbar:</p>
-        <div class="list-group mb-6">
-            <a href="#endpoint-get-api-v1-building"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">GET</span>
-                <span>/api/v1/building</span>
-            </a>
-            <a href="#endpoint-get-api-v1-building_list_complete"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">GET</span>
-                <span>/api/v1/building_list_complete</span>
-            </a>
-            <a href="#endpoint-get-building_id"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">GET</span>
-                <span>/api/v1/building/{id}</span>
-            </a>
-            <a href="#endpoint-post-building"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">POST</span>
-                <span>/api/v1/building</span>
-            </a>
-            <a href="#endpoint-put-building_id"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">PUT</span>
-                <span>/api/v1/building/{id}</span>
-            </a>
-            <a href="#endpoint-delete-building_id"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">DELETE</span>
-                <span>/api/v1/building/{id}</span>
-            </a>
-        </div>
-        <article id="endpoint-get-api-v1-building">
+        <x-endpoint-list :items="$buildingslist" />
+        <hr>
+        <article class="mt-3" id="endpoint-get-buildings">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/building</code>
+                    <x-code type="key">/building</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -926,7 +802,7 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>GET</code>
+                    <x-code type="get">GET</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -938,82 +814,37 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_get_buildings-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_get_buildings-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_get_buildings-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_get_buildings-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_get_buildings-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_get_buildings-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_get_buildings-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_get_buildings-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_get_buildings-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_buildings-docs-tab-scheme"
-                        >
-                            -
-                        </div>
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_get_buildings-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_buildings-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">[</span>
-    <span class="token punctuation">{</span>
-        <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-05 10:44:20"</span><span class="token punctuation">,</span>
-        <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-05 10:44:20"</span><span class="token punctuation">,</span>
-        <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"geb-8200"</span><span class="token punctuation">,</span>
-        <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"2a54b8f9-6ec3-3add-8e96-54f1868e1331"</span><span class="token punctuation">,</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Halle T61"</span><span class="token punctuation">,</span>
-        <span class="token property">"place"</span><span class="token operator">:</span> <span class="token string">"Tor Süd T61"</span><span class="token punctuation">,</span>
-        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Molestias cupiditate et architecto provident ut libero laborum....."</span><span class="token punctuation">,</span>
-        <span class="token property">"goods_income_has"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-        <span class="token property">"goods_income_name"</span><span class="token operator">:</span> <span class="token string">"WE-GT61"</span><span class="token punctuation">,</span>
-        <span class="token property">"building_type_id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token property">"location_id"</span><span class="token operator">:</span> <span class="token number">1</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>...<span class="token punctuation">}</span>
-<span class="token punctuation">]</span></code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="response">
+                        <x-slot:request>-</x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">[
+    {
+        "id": 1,
+        "created": "2021-01-05 10:44:20",
+        "updated": "2021-01-05 10:44:20",
+        "label": "geb-8200",
+        "uid": "2a54b8f9-6ec3-3add-8e96-54f1868e1331",
+        "name": "Halle T61",
+        "place": "Tor Süd T61",
+        "description": "Lagerhalle T61 mit Wareneingang",
+        "goods_income_has": true,
+        "goods_income_name": "WE-GT61",
+        "building_type_id": 1,
+        "location_id": 1
+    },
+    {...}
+]</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-get-api-v1-building_list_complete">
+        <article class="mt-3" id="endpoint-get-buildings_list_full">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/building_list_complete</code>
+                    <x-code type="key">/building_list_full</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -1031,7 +862,7 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>GET</code>
+                    <x-code type="get">GET</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -1043,116 +874,67 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_get_building_list_complete-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_get_building_list_complete-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_get_building_list_complete-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_get_building_list_complete-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >
-                                Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_get_building_list_complete-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_get_building_list_complete-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_get_building_list_complete-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >
-                                Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_get_building_list_complete-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_get_building_list_complete-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_building_list_complete-docs-tab-scheme"
-                        >
-                            -
-                        </div>
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_get_building_list_complete-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_building_list_complete-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">[</span>
-    <span class="token punctuation">{</span>
-        <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-05 10:44:20"</span><span class="token punctuation">,</span>
-        <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-05 10:44:20"</span><span class="token punctuation">,</span>
-        <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"geb-8200"</span><span class="token punctuation">,</span>
-        <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"2a54b8f9-6ec3-3add-8e96-54f1868e1331"</span><span class="token punctuation">,</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Halle T61"</span><span class="token punctuation">,</span>
-        <span class="token property">"place"</span><span class="token operator">:</span> <span class="token string">"Tor Süd T61"</span><span class="token punctuation">,</span>
-        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Molestias cupiditate et architecto provident ut libero laborum....."</span><span class="token punctuation">,</span>
-        <span class="token property">"goods_income_has"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-        <span class="token property">"goods_income_name"</span><span class="token operator">:</span> <span class="token string">"WE-GT61"</span><span class="token punctuation">,</span>
-        <span class="token property">"type"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Lager"</span><span class="token punctuation">,</span>
-            <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Gebäude zur Lagerung von Baugeräten"</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token property">"location"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Werk 12"</span><span class="token punctuation">,</span>
-            <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"bln153"</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token property">"building_objects"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token property">"rooms"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-            <span class="token property">"compartments"</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
-            <span class="token property">"equipment"</span><span class="token operator">:</span> <span class="token number">226</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>...<span class="token punctuation">}</span>
-<span class="token punctuation">]</span>
+                    <x-api-tabs open="response">
+                        <x-slot:request>-</x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">[
+    {
+        "id": 1,
+        "created": "2021-01-05 10:44:20",
+        "updated": "2021-01-05 10:44:20",
+        "label": "geb-8200",
+        "uid": "2a54b8f9-6ec3-3add-8e96-54f1868e1331",
+        "name": "Halle T61",
+        "place": "Tor Süd T61",
+        "description": "Lagerhalle T61 ",
+        "goods_income_has": true,
+        "goods_income_name": "WE-GT61",
+        "type": {
+            "name": "Lager",
+            "description": "Gebäude zur Lagerung von Baugeräten"
+        },
+        "location": {
+            "name": "Werk 12",
+            "label": "bln153"
+        },
+        "building_objects": {
+            "rooms": 2,
+            "compartments": 4,
+            "equipment": 226
+        }
+    },
+    {...}
+]
                                 </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-get-building_id">
+        <article class="mt-3" id="endpoint-get-buildings_id">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/building/{id}</code>
+                    <x-code type="key">/building/{id}</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Variable</dt>
                 <dd class="api-dd">
-                    <code>id</code>
-                    <span class="ml-5 badge badge-dark-soft">INTEGER</span>
+                    <x-api-key key="id" type="Integer" noborder/>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Aufgabe</dt>
                 <dd class="api-dd">
-                    Ruft die Daten zu einem Gebäude mit der <code>id</code>
+                    Ruft die Daten zu einem Gebäude mit der <x-code>id</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>GET</code>
+                    <x-code type="get">GET</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -1164,86 +946,40 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_get_building_id-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_get_building_id-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_get_building_id-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_get_building_id-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_get_building_id-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_get_building_id-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_get_building_id-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_get_building_id-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_get_building_id-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_building_id-docs-tab-scheme"
-                        >
-                            -
-                        </div>
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_get_building_id-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_building_id-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-05 10:44:20"</span><span class="token punctuation">,</span>
-    <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-05 10:44:20"</span><span class="token punctuation">,</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"geb-8200"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"2a54b8f9-6ec3-3add-8e96-54f1868e1331"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Halle T61"</span><span class="token punctuation">,</span>
-    <span class="token property">"place"</span><span class="token operator">:</span> <span class="token string">"Tor Süd T61"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Molestias cupiditate et architecto provident ut libero laborum....."</span><span class="token punctuation">,</span>
-    <span class="token property">"goods_income_has"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"goods_income_name"</span><span class="token operator">:</span> <span class="token string">"WE-GT61"</span><span class="token punctuation">,</span>
-    <span class="token property">"type"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Lager"</span><span class="token punctuation">,</span>
-        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Gebäude zur Lagerung von Maschienen"</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token property">"location"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Werk 12"</span><span class="token punctuation">,</span>
-        <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"bln153"</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+                    <x-api-tabs open="response">
+                        <x-slot:request>-</x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">{
+    "created": "2021-01-05 10:44:20",
+    "updated": "2021-01-05 10:44:20",
+    "label": "geb-8200",
+    "uid": "2a54b8f9-6ec3-3add-8e96-54f1868e1331",
+    "name": "Halle T61",
+    "place": "Tor Süd T61",
+    "description": "Molestias cupiditate .....",
+    "goods_income_has": true,
+    "goods_income_name": "WE-GT61",
+    "type": {
+        "name": "Lager",
+        "description": "Gebäude zur Lagerung von Maschienen"
+    },
+    "location": {
+        "name": "Werk 12",
+        "label": "bln153"
+    }
+}
                             </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-post-building">
+        <article class="mt-3" id="endpoint-post-buildings">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/building</code>
+                    <x-code type="key">/building</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -1261,187 +997,84 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>POST</code>
+                    <x-code type="post">POST</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Felder</dt>
                 <dd class="api-dd">
                     <p>Erforderliche Felder</p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>label</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>goods_income_has</code>
-                            <span class="badge badge-dark-soft">BOOLEAN</span>
-                        </li>
-                    </ul>
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#buildings_optionals"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="buildings_optionals"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="buildings_optionals"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>description</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>uid</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>name</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>place</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>type</code>
-                                <span class="badge badge-dark-soft">OBJECT</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>location_id</code>
-                                <span class="badge badge-dark-soft">INTEGER</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <p class="mt-3">Wird das Objekt &lt;code&gt;type&lt;/code&gt; verwendet, sind folgende Felder erforderlich</p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>type.name</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                    </ul>
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#buildings_put_optional_type"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="buildings_put_optional_type"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="buildings_put_optional_type"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>type.description</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                        </ul>
-                    </div>
+
+                    <x-api-key key="label" type="Integer" />
+                    <x-api-key key="goods_income_has" type="BOOLEAN" />
+
+                    <x-api-optionals>
+                        <x-api-key key="description" type="String" />
+                        <x-api-key key="uid" type="String" />
+                        <x-api-key key="name" type="String" />
+                        <x-api-key key="place" type="String" />
+                        <x-api-key key="type" type="Object" />
+                        <x-api-key key="location_id" type="Integer" />
+
+
+                        <p class="mt-3 pl-2">Wird das Objekt <x-code type="key">type</x-code> verwendet, sind folgende Felder erforderlich</p>
+                        <x-api-key key="type.name" type="String" />
+                        <p class="mt-3 pl-2">Optional dazu</p>
+                        <x-api-key key="type.description" type="String" />
+
+                    </x-api-optionals>
+
+
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_post_building-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_post_building-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_post_building-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_post_building-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_post_building-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_post_building-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_post_building-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_post_building-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_post_building-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_post_building-docs-tab-scheme"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"label"</span> <span class="token operator">:</span> <span class="token string">"b12345"</span><span class="token punctuation">,</span>
-    <span class="token property">"goods_income_has"</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span> <span class="token operator">:</span> <span class="token string">"430eb8b6-619c-4ebf-8c54-b139b99e7a33"</span><span class="token punctuation">,</span>
-    <span class="token property">"type"</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Büro"</span><span class="token punctuation">,</span>
-        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Gebäude mit reiner Büronutzung"</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span> <span class="token operator">:</span> <span class="token string">"Gebäude 12345"</span><span class="token punctuation">,</span>
-    <span class="token property">"place"</span> <span class="token operator">:</span> <span class="token string">"Tor Nord"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span> <span class="token operator">:</span> <span class="token string">"Bürogebäude Zentraleinkauf"</span><span class="token punctuation">,</span>
-    <span class="token property">"goods_income_name"</span> <span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-    <span class="token property">"location_id"</span> <span class="token operator">:</span> <span class="token number">1</span>
-<span class="token punctuation">}</span>
-                                </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_post_building-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_post_building-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
-    <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 19:15:06"</span><span class="token punctuation">,</span>
-    <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 19:15:06"</span><span class="token punctuation">,</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"b123435"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"430eb8b6-619c-4ebf-8c54-b139b99e7a32"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Bürogebäude Zentraleinkauf"</span><span class="token punctuation">,</span>
-    <span class="token property">"place"</span><span class="token operator">:</span> <span class="token string">"Tor Nord"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-    <span class="token property">"goods_income_has"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"goods_income_name"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-    <span class="token property">"building_type_id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-    <span class="token property">"location_id"</span><span class="token operator">:</span> <span class="token number">1</span>
-<span class="token punctuation">}</span>
-                                </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="request">
+                        <x-slot:request>
+                            <pre class=" language-json"><code class=" language-json">{
+    "label" : "b12345",
+    "goods_income_has" : false,
+    "uid" : "430eb8b6-619c-4ebf-8c54-b139b99e7a33",
+    "type" : {
+        "name": "Büro",
+        "description": "Gebäude mit reiner Büronutzung"
+    },
+    "name" : "Gebäude 12345",
+    "place" : "Tor Nord",
+    "description" : "Bürogebäude Zentraleinkauf",
+    "goods_income_name" : null,
+    "location_id" : 1
+}
+                            </code></pre>
+                        </x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">{
+    "id": 7,
+    "created": "2021-01-06 19:15:06",
+    "updated": "2021-01-06 19:15:06",
+    "label": "b123435",
+    "uid": "430eb8b6-619c-4ebf-8c54-b139b99e7a32",
+    "name": "Bürogebäude Zentraleinkauf",
+    "place": "Tor Nord",
+    "description": null,
+    "goods_income_has": true,
+    "goods_income_name": null,
+    "building_type_id": 1,
+    "location_id": 1
+}
+                                 </code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-put-building_id">
+        <article class="mt-3" id="endpoint-put-buildings_id">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/building/{id}</code>
+                    <x-code type="key">/building/{id}</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -1460,171 +1093,78 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>PUT</code>
+                    <x-code type="put">PUT</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Felder</dt>
                 <dd class="api-dd">
                     <p>Erforderliche Felder</p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>label</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>goods_income_has</code>
-                            <span class="badge badge-dark-soft">BOLEAN</span>
-                        </li>
-                    </ul>
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#buildings_put_optionals"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="buildings_put_optionals"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="buildings_put_optionals"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>uid</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>description</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>goods_income_name</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>place</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>type_id</code>
-                                <span class="badge badge-dark-soft">INTEGER</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>location_id</code>
-                                <span class="badge badge-dark-soft">INTEGER</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <x-api-key key="label" type="Integer" />
+                    <x-api-key key="goods_income_has" type="Boolean" />
+                    <x-api-optionals>
+                        <x-api-key key="uid" type="String" />
+                        <x-api-key key="description" type="String" />
+                        <x-api-key key="goods_income_name" type="String" />
+                        <x-api-key key="place" type="String" />
+                        <x-api-key key="type_id" type="Integer" />
+                        <x-api-key key="location_id" type="Integer" />
+                    </x-api-optionals>
+
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_put_building_id-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_put_building_id-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_put_building_id-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_put_building_id-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_put_building_id-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_put_building_id-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_put_building_id-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_put_building_id-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_put_building_id-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_put_building_id-docs-tab-scheme"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"geb-1498"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"3e982f3e-4fd2-3dae-b748-f5c19efd1cae"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"necessitatibus-ullam-eum"</span><span class="token punctuation">,</span>
-    <span class="token property">"place"</span><span class="token operator">:</span> <span class="token string">"5c"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Voluptas libero voluptatum vel maxime. Fugiat quod quis vitae saepe quis harum libero eaque. Qui quam et ab voluptatem cum. Ea commodi harum consequatur neque."</span><span class="token punctuation">,</span>
-    <span class="token property">"goods_income_has"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"goods_income_name"</span><span class="token operator">:</span> <span class="token string">"3"</span><span class="token punctuation">,</span>
-    <span class="token property">"type_id"</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-    <span class="token property">"location_id"</span> <span class="token operator">:</span> <span class="token number">1</span>
-<span class="token punctuation">}</span>
-                                </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_put_building_id-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_put_building_id-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 12:26:19"</span><span class="token punctuation">,</span>
-    <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 20:05:22"</span><span class="token punctuation">,</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"geb-1498"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"3e982f3e-4fd2-3dae-b748-f5c19efd1cae"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"necessitatibus-ullam-eum"</span><span class="token punctuation">,</span>
-    <span class="token property">"place"</span><span class="token operator">:</span> <span class="token string">"5c"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Voluptas libero voluptatum vel maxime. Fugiat quod quis vitae saepe quis harum libero eaque. Qui quam et ab voluptatem cum. Ea commodi harum consequatur neque."</span><span class="token punctuation">,</span>
-    <span class="token property">"goods_income_has"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"goods_income_name"</span><span class="token operator">:</span> <span class="token string">"3"</span><span class="token punctuation">,</span>
-    <span class="token property">"type"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Werkstatt"</span><span class="token punctuation">,</span>
-        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Gebäude mit reiner Werkstattnutzung"</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token property">"location"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"quam-officiis-eligendi-veritatis"</span><span class="token punctuation">,</span>
-        <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"bln251"</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-                                </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="request">
+                        <x-slot:request>
+                            <pre class=" language-json"><code class=" language-json">{
+    "label" : "b12345",
+    "goods_income_has" : false,
+    "uid" : "430eb8b6-619c-4ebf-8c54-b139b99e7a33",
+    "type" : {
+        "name": "Büro",
+        "description": "Gebäude mit reiner Büronutzung"
+    },
+    "name" : "Gebäude 12345",
+    "place" : "Tor Nord",
+    "description" : "Bürogebäude Zentraleinkauf",
+    "goods_income_name" : null,
+    "location_id" : 1
+}
+
+                            </code></pre>
+                        </x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">{
+    "label": "geb-1498",
+    "uid": "3e982f3e-4fd2-3dae-b748-f5c19efd1cae",
+    "name": "necessitatibus-ullam-eum",
+    "place": "5c",
+    "description": "Voluptas libero voluptatum vel maxime...",
+    "goods_income_has": true,
+    "goods_income_name": "3",
+    "type_id" : 2,
+    "location_id" : 1
+}
+</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-delete-building_id">
+        <article class="mt-3" id="endpoint-delete-buildings_id">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/building/{id}</code>
+                    <x-code type="key">/building/{id}</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Variable</dt>
                 <dd class="api-dd">
-                    <code>id</code>
-                    <span class="ml-5 badge badge-dark-soft">INTEGER</span>
+                    <x-api-key key="id" type="Integer" noborder />
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -1636,7 +1176,7 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>DELETE</code>
+                    <x-code type="delete">DELETE</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -1648,65 +1188,32 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Antwort</dt>
                 <dd class="api-dd">
-                    <div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">{</span>
-        <span class="token property">"status"</span> <span class="token operator">:</span> <span class="token string">"building deleted"</span>
-    <span class="token punctuation">}</span></code></pre>
-                        <div class="toolbar">
-                            <div class="toolbar-item">
-                                <button type="button">Copy</button>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="response">
+                        <x-slot:request>
+                            <pre class=" language-json"><code class=" language-json">-</code></pre>
+                        </x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">{
+    "status" : "building deleted"
+}
+</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
     </section>
+    <hr>
     <section id="rooms">
         <h2>Räume</h2>
         <p>Folgende Endpunkte sind verfügbar:</p>
-        <div class="list-group mb-6">
-            <a href="#endpoint-get-api-v1-room"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">GET</span>
-                <span>/api/v1/room</span>
-            </a>
-            <a href="#endpoint-get-api-v1-room_list_complete"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">GET</span>
-                <span>/api/v1/room_list_complete</span>
-            </a>
-            <a href="#endpoint-get-room_id"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">GET</span>
-                <span>/api/v1/room/{id}</span>
-            </a>
-            <a href="#endpoint-post-room"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">POST</span>
-                <span>/api/v1/room</span>
-            </a>
-            <a href="#endpoint-put-room_id"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">PUT</span>
-                <span>/api/v1/room/{id}</span>
-            </a>
-            <a href="#endpoint-delete-room_id"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">DELETE</span>
-                <span>/api/v1/room/{id}</span>
-            </a>
-        </div>
-        <article id="endpoint-get-api-v1-room">
+        <x-endpoint-list :items="$roomslist" />
+        <hr>
+        <article id="endpoint-get-rooms">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/room</code>
+                    <x-code type="key">/rooms</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -1724,7 +1231,7 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>GET</code>
+                    <x-code type="get">GET</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -1736,79 +1243,34 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_get_room-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_get_room-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_get_room-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_get_room-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_get_room-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_get_room-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_get_room-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_get_room-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_get_room-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_room-docs-tab-scheme"
-                        >
-                            -
-                        </div>
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_get_room-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_room-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">[</span>
-    <span class="token punctuation">{</span>
-        <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 12:26:19"</span><span class="token punctuation">,</span>
-        <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 12:26:19"</span><span class="token punctuation">,</span>
-        <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"rm-142"</span><span class="token punctuation">,</span>
-        <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"3e0b5fb1-423f-383e-b040-9f93d0c47c9d"</span><span class="token punctuation">,</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"ipsum"</span><span class="token punctuation">,</span>
-        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Optio et mollitia tempore consequatur. Magnam debitis doloremque voluptatem pariatur omnis. Alias ut beatae enim aperiam laborum pariatur. Quod voluptate et quis omnis voluptatem et dolorum. Cumque est eum ducimus nemo dolores eos. Nesciunt ut fuga quia et sed assumenda."</span><span class="token punctuation">,</span>
-        <span class="token property">"building_id"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-        <span class="token property">"room_type_id"</span><span class="token operator">:</span> <span class="token number">3</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>...<span class="token punctuation">}</span>
-<span class="token punctuation">]</span></code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="response">
+                        <x-slot:request>-</x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">[
+    {
+        "id": 1,
+        "created": "2021-01-06 12:26:19",
+        "updated": "2021-01-06 12:26:19",
+        "label": "rm-142",
+        "uid": "3e0b5fb1-423f-383e-b040-9f93d0c47c9d",
+        "name": "ipsum",
+        "description": "Optio et mollitia tempore consequatur...",
+        "building_id": 2,
+        "room_type_id": 3
+    },
+    {...}
+]</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-get-api-v1-room_list_complete">
+        <article id="endpoint-get-rooms_list_full">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/room_list_complete</code>
+                    <x-code type="key">/rooms_list_full</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -1821,13 +1283,13 @@ reading-time: ~ 10min
                 <dt class="api-dt">Aufgabe</dt>
                 <dd class="api-dd">
                     Abrufen aller Räume der testWare inklusive Räumetyp, Details des Gebäude und Anzahl der Objekte des Raums im Zusatzfeld
-                    <code>room_objects</code>
+                    <x-code>room_objects</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>GET</code>
+                    <x-code type="get">GET</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -1839,100 +1301,51 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_get_room_list_complete-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_get_room_list_complete-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_get_room_list_complete-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_get_room_list_complete-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_get_room_list_complete-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_get_room_list_complete-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_get_room_list_complete-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >
-                                Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_get_room_list_complete-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_get_room_list_complete-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_room_list_complete-docs-tab-scheme"
-                        >
-                            -
-                        </div>
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_get_room_list_complete-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_room_list_complete-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">[</span>
-    <span class="token punctuation">{</span>
-        <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-05 10:44:20"</span><span class="token punctuation">,</span>
-        <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-05 10:44:20"</span><span class="token punctuation">,</span>
-        <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"rm-117"</span><span class="token punctuation">,</span>
-        <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"1e0cfa36-e485-36c7-8f22-21c83884a442"</span><span class="token punctuation">,</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"quis"</span><span class="token punctuation">,</span>
-        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Amet minus dolorum at reprehenderit velit iste..."</span><span class="token punctuation">,</span>
-        <span class="token property">"type"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"Material"</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token property">"building"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"geb-7715"</span><span class="token punctuation">,</span>
-            <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"11a26323-672d-3ebf-92c0-349d1c397f6a"</span><span class="token punctuation">,</span>
-            <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"fugit-qui"</span><span class="token punctuation">,</span>
-            <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Et magnam atque quidem ratione qui voluptates..."</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token property">"room_objects"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token property">"compartments"</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
-            <span class="token property">"equipment"</span><span class="token operator">:</span> <span class="token number">240</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>...<span class="token punctuation">}</span>
-<span class="token punctuation">]</span>
-                                </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="response">
+                        <x-slot:request>-</x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">[
+    {
+        "id": 1,
+        "created": "2021-01-05 10:44:20",
+        "updated": "2021-01-05 10:44:20",
+        "label": "rm-117",
+        "uid": "1e0cfa36-e485-36c7-8f22-21c83884a442",
+        "name": "quis",
+        "description": "Amet minus dolorum at reprehenderit velit iste...",
+        "type": {
+            "label": "Material"
+        },
+        "building": {
+            "label": "geb-7715",
+            "uid": "11a26323-672d-3ebf-92c0-349d1c397f6a",
+            "name": "fugit-qui",
+            "description": "Et magnam atque quidem ratione qui voluptates..."
+        },
+        "room_objects": {
+            "compartments": 7,
+            "equipment": 240
+        }
+    },
+    {...}
+]</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-get-room_id">
+        <article id="endpoint-get-rooms_id">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/room/{id}</code>
+                    <x-code type="key">/rooms/{id}</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Variable</dt>
                 <dd class="api-dd">
-                    <code>id</code>
-                    <span class="ml-5 badge badge-dark-soft">INTEGER</span>
+                    <x-api-key key="id" type="Integer" />
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -1944,7 +1357,7 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>GET</code>
+                    <x-code type="get">GET</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -1956,78 +1369,45 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_get_room_id-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_get_room_id-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_get_room_id-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_get_room_id-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_get_room_id-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_get_room_id-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_get_room_id-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_get_room_id-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_get_room_id-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_room_id-docs-tab-scheme"
-                        >
-                            -
-                        </div>
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_get_room_id-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_room_id-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-    <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-05 10:44:20"</span><span class="token punctuation">,</span>
-    <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-05 10:44:20"</span><span class="token punctuation">,</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"rm-117"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"1e0cfa36-e485-36c7-8f22-21c83884a442"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"quis"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Amet minus dolorum at reprehenderit velit iste laudantium..."</span><span class="token punctuation">,</span>
-    <span class="token property">"building_id"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-    <span class="token property">"room_type_id"</span><span class="token operator">:</span> <span class="token number">3</span>
-<span class="token punctuation">}</span>
-                            </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="response">
+                        <x-slot:request>-</x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">[
+    {
+        "id": 1,
+        "created": "2021-01-05 10:44:20",
+        "updated": "2021-01-05 10:44:20",
+        "label": "rm-117",
+        "uid": "1e0cfa36-e485-36c7-8f22-21c83884a442",
+        "name": "quis",
+        "description": "Amet minus dolorum at reprehenderit velit iste...",
+        "type": {
+            "label": "Material"
+        },
+        "building": {
+            "label": "geb-7715",
+            "uid": "11a26323-672d-3ebf-92c0-349d1c397f6a",
+            "name": "fugit-qui",
+            "description": "Et magnam atque quidem ratione qui voluptates..."
+        },
+        "room_objects": {
+            "compartments": 7,
+            "equipment": 240
+        }
+    },
+    {...}
+]</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-post-room">
+        <article id="endpoint-post-rooms">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/room</code>
+                    <x-code type="key">/rooms</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -2045,190 +1425,83 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>POST</code>
+                    <x-code type="post">POST</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Felder</dt>
                 <dd class="api-dd">
                     <p>Erforderliche Felder</p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>label</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                    </ul>
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#rooms_optionals"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="rooms_optionals"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="rooms_optionals"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>uid</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>name</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>description</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>building_id</code>
-                                <span class="badge badge-dark-soft">INTEGER</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <p><code>room_type_id</code>
-                                    <span class="badge badge-dark-soft">INTEGER</span>
-                                </p>
-                                <p>oder</p>
-                                <p><code>type</code>
-                                    <span class="badge badge-dark-soft">OBJECT</span>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <p class="mt-3">Wird das Objekt &lt;code&gt;type&lt;/code&gt; verwendet, sind folgende Felder erforderlich</p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>type.label</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                    </ul>
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#rooms_post_optional_type"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="rooms_post_optional_type"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="rooms_post_optional_type"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>type.name</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>type.description</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <x-api-key key="label" type="String" noborder/>
+
+                    <x-api-optionals>
+                        <x-api-key key="uid" type="String"/>
+                        <x-api-key key="name" type="String"/>
+                        <x-api-key key="description" type="String"/>
+                        <x-api-key key="building_id" type="String"/>
+                        <x-api-key key="room_type_id" type="String"/>
+
+                        <p class="mt-3 pl-2">oder</p>
+                        <x-api-key key="type" type="Object"/>
+
+                        <p class="mt-3 pl-2">Wird das Objekt  <x-code>type</x-code> verwendet, sind folgende Felder erforderlich</p>
+                        <x-api-key key="type.label" type="String"/>
+
+                        <p class="mt-3 pl-2">Optionale Felder</p>
+                        <x-api-key key="type.name" type="String"/>
+                        <x-api-key key="type.description" type="String"/>
+                    </x-api-optionals>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_post_room-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_post_room-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_post_room-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_post_room-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_post_room-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_post_room-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_post_room-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_post_room-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_post_room-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_post_room-docs-tab-scheme"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"rm-118"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"1e0cfa36-e485-36c7-8f26-21c83884a442"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"quis"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Amet minus dolorum at reprehenderit velit iste laudantium..."</span><span class="token punctuation">,</span>
-    <span class="token property">"type"</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"Büro"</span><span class="token punctuation">,</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Räume mit reiner Büronutzung"</span><span class="token punctuation">,</span>
-        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token null keyword">null</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token property">"building_id"</span><span class="token operator">:</span> <span class="token number">5</span>
-<span class="token punctuation">}</span>
-                                </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_post_room-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_post_room-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
-    <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 20:42:10"</span><span class="token punctuation">,</span>
-    <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 20:42:10"</span><span class="token punctuation">,</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"rm-118"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"1e0cfa36-e485-36c7-8f26-21c83884a442"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"quis"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Amet minus dolorum at reprehenderit velit iste laudantium..."</span><span class="token punctuation">,</span>
-    <span class="token property">"building_id"</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-    <span class="token property">"room_type_id"</span><span class="token operator">:</span> <span class="token number">1</span>
-<span class="token punctuation">}</span>
-                                </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="response">
+                        <x-slot:request>
+                            <pre class=" language-json"><code class=" language-json">{
+    "label": "rm-118",
+    "uid": "1e0cfa36-e485-36c7-8f26-21c83884a442",
+    "name": "quis",
+    "description": "Amet minus dolorum at reprehenderit velit iste laudantium...",
+    "type" : {
+        "label": "Büro",
+        "name": "Räume mit reiner Büronutzung",
+        "description": null
+    },
+    "building_id": 5
+}
+                                </code>
+                            </pre>
+                        </x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">{
+    "id": 15,
+    "created": "2021-01-06 20:42:10",
+    "updated": "2021-01-06 20:42:10",
+    "label": "rm-118",
+    "uid": "1e0cfa36-e485-36c7-8f26-21c83884a442",
+    "name": "quis",
+    "description": "Amet minus dolorum at reprehenderit velit iste laudantium...",
+    "building_id": 5,
+    "room_type_id": 1
+}</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-put-room_id">
+        <article id="endpoint-put-rooms_id">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/room/{id}</code>
+                    <x-code type="key">/rooms/{id}</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Variable</dt>
                 <dd class="api-dd">
-                    <code>id</code>
-                    <span class="ml-5 badge badge-dark-soft">INTEGER</span>
+                   <x-api-key key="id" type="Integer" noborder/>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -2240,198 +1513,89 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>PUT</code>
+                    <x-code type="put">PUT</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Felder</dt>
                 <dd class="api-dd">
                     <p>Erforderliche Felder</p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>label</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                    </ul>
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#rooms_put_optionals"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="rooms_put_optionals"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="rooms_put_optionals"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>uid</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>name</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>description</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>building_id</code>
-                                <span class="badge badge-dark-soft">INTEGER</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <p><code>room_type_id</code>
-                                    <span class="badge badge-dark-soft">INTEGER</span>
-                                </p>
-                                <p>oder</p>
-                                <p><code>type</code>
-                                    <span class="badge badge-dark-soft">OBJECT</span>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <p class="mt-3">Wird das Objekt &lt;code&gt;type&lt;/code&gt; verwendet, sind folgende Felder erforderlich</p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>type.label</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                    </ul>
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#rooms_put_optional_type"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="rooms_put_optional_type"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="rooms_put_optional_type"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>type.name</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>type.description</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <x-api-key key="label" type="String"/>
+                    <x-api-optionals>
+                        <x-api-key key="uid" type="String"/>
+                        <x-api-key key="name" type="String"/>
+                        <x-api-key key="description" type="String"/>
+                        <x-api-key key="building_id" type="String"/>
+                        <x-api-key key="room_type_id" type="String"/>
+
+                        <p class="mt-3 pl-2">oder</p>
+                        <x-api-key key="type" type="Object"/>
+
+                        <p class="mt-3 pl-2">Wird das Objekt  <x-code>type</x-code> verwendet, sind folgende Felder erforderlich</p>
+                        <x-api-key key="type.label" type="String"/>
+
+                        <p class="mt-3 pl-2">Optionale Felder</p>
+                        <x-api-key key="type.name" type="String"/>
+                        <x-api-key key="type.description" type="String"/>
+                    </x-api-optionals>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_put_room_id-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_put_room_id-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_put_room_id-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_put_room_id-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_put_room_id-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_put_room_id-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_put_room_id-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_put_room_id-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_put_room_id-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_put_room_id-docs-tab-scheme"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"rm-118"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"1e0cfa36-e485-36c7-8f26-21c83884a442"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"quis"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Amet minus dolorum at reprehenderit velit iste laudantium..."</span><span class="token punctuation">,</span>
-    <span class="token property">"room_type_id"</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-    <span class="token property">"building_id"</span><span class="token operator">:</span> <span class="token number">5</span>
-<span class="token punctuation">}</span>
-                                </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_put_room_id-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_put_room_id-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-<span class="token punctuation">{</span>
-    <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-    <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 22:23:44"</span><span class="token punctuation">,</span>
-    <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 23:07:33"</span><span class="token punctuation">,</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"rm-118"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"1e0cfa36-e485-36c7-8f26-21c83884a442"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"quis"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Amet minus dolorum at reprehenderit velit iste laudantium..."</span><span class="token punctuation">,</span>
-    <span class="token property">"room_type_id"</span> <span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-    <span class="token property">"building_id"</span><span class="token operator">:</span> <span class="token number">5</span>
-<span class="token punctuation">}</span>
-                                </code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="request">
+                        <x-slot:request>
+                            <pre class=" language-json"><code class=" language-json">{
+    "label": "rm-118",
+    "uid": "1e0cfa36-e485-36c7-8f26-21c83884a442",
+    "name": "quis",
+    "description": "Amet minus dolorum at reprehenderit ...",
+    "room_type_id" : 2,
+    "building_id": 5
+}</code>
+                            </pre>
+                        </x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">{
+    "id": 1,
+    "created": "2021-01-06 22:23:44",
+    "updated": "2021-01-06 23:07:33",
+    "label": "rm-118",
+    "uid": "1e0cfa36-e485-36c7-8f26-21c83884a442",
+    "name": "quis",
+    "description": "Amet minus dolorum at reprehenderit ...",
+    "room_type_id" : 2,
+    "building_id": 5
+}</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-delete-room_id">
+        <article id="endpoint-delete-rooms_id">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/room/{id}</code>
+                    <x-code type="key">/rooms/{id}</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Variable</dt>
                 <dd class="api-dd">
-                    <code>id</code>
-                    <span class="ml-5 badge badge-dark-soft">INTEGER</span>
+                    <x-api-key key="id" type="Integer" noborder />
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Aufgabe</dt>
                 <dd class="api-dd">
-                    Löscht den Raum mit der Referenz <code>{id}</code>.
+                    Löscht den Raum mit der Referenz <x-code>{id}</x-code>.
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>DELETE</code>
+                    <x-code type="delete">DELETE</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -2441,69 +1605,31 @@ reading-time: ~ 10min
                 </dd>
             </dl>
             <dl class="api-dl">
-                <dt class="api-dt">Antwort</dt>
+                <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <div class="code-toolbar"><pre class=" language-json"><code class=" language-json">
-    <span class="token punctuation">{</span>
-        <span class="token property">"status"</span> <span class="token operator">:</span> <span class="token string">"room deleted"</span>
-    <span class="token punctuation">}</span>
-                                </code></pre>
-                        <div class="toolbar">
-                            <div class="toolbar-item">
-                                <button type="button">Copy</button>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="response">
+                        <x-slot:request>-</x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">{
+    "status": "room deleted"
+}</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
     </section>
+    <hr>
     <section id="compartments">
         <h2>Stellplätze</h2>
         <p>Folgende Endpunkte sind verfügbar:</p>
-        <div class="list-group mb-6">
-            <a href="#endpoint-get-api-v1-compartment"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">GET</span>
-                <span>/api/v1/compartment</span>
-            </a>
-            <a href="#endpoint-get-api-v1-compartment_list_complete"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">GET</span>
-                <span>/api/v1/compartment_list_complete</span>
-            </a>
-            <a href="#endpoint-get-compartment_id"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">GET</span>
-                <span>/api/v1/compartment/{id}</span>
-            </a>
-            <a href="#endpoint-post-compartment"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">POST</span>
-                <span>/api/v1/compartment</span>
-            </a>
-            <a href="#endpoint-put-compartment_id"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">PUT</span>
-                <span>/api/v1/compartment/{id}</span>
-            </a>
-            <a href="#endpoint-delete-compartment_id"
-               class="list-group-item list-group-item-action js-anchor-link"
-            >
-                <span class="mr-5 badge badge-dark-soft">DELETE</span>
-                <span>/api/v1/compartment/{id}</span>
-            </a>
-        </div>
-        <article id="endpoint-get-api-v1-compartment">
+        <x-endpoint-list :items="$compartmentslist" />
+        <hr>
+        <article id="endpoint-get-compartments">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/compartment</code>
+                    <x-code type="key">/compartment</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -2521,7 +1647,7 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>GET</code>
+                    <x-code type="get">GET</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -2533,81 +1659,34 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_get_compartment-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_get_compartment-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_get_compartment-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_get_compartment-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_get_compartment-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_get_compartment-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_get_compartment-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_get_compartment-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_get_compartment-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_compartment-docs-tab-scheme"
-                        >
-                            -
-                        </div>
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_get_compartment-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_compartment-docs-tab-response"
-                        >
-
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">[</span>
-    <span class="token punctuation">{</span>
-        <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 12:26:19"</span><span class="token punctuation">,</span>
-        <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 12:26:19"</span><span class="token punctuation">,</span>
-        <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"rm-142"</span><span class="token punctuation">,</span>
-        <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"3e0b5fb1-423f-383e-b040-9f93d0c47c9d"</span><span class="token punctuation">,</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"ipsum"</span><span class="token punctuation">,</span>
-        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Optio et mollitia tempore consequatur. Magnam debitis doloremque voluptatem pariatur omnis. Alias ut beatae enim aperiam laborum pariatur. Quod voluptate et quis omnis voluptatem et dolorum. Cumque est eum ducimus nemo dolores eos. Nesciunt ut fuga quia et sed assumenda."</span><span class="token punctuation">,</span>
-        <span class="token property">"building_id"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-        <span class="token property">"compartment_type_id"</span><span class="token operator">:</span> <span class="token number">3</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>...<span class="token punctuation">}</span>
-<span class="token punctuation">]</span></code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                    <x-api-tabs open="response">
+                        <x-slot:request>-</x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">[
+    {
+        "id": 1,
+        "created": "2021-01-06 12:26:19",
+        "updated": "2021-01-06 12:26:19",
+        "label": "rm-142",
+        "uid": "3e0b5fb1-423f-383e-b040-9f93d0c47c9d",
+        "name": "ipsum",
+        "description": "Optio et mollitia tempore consequatur...",
+        "building_id": 2,
+        "compartment_type_id": 3
+    },
+    {...}
+]</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-get-api-v1-compartment_list_complete">
+        <article id="endpoint-get-compartments_list_full">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/compartment_list_complete</code>
+                    <x-code type="key">/compartment_list_complete</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -2620,13 +1699,13 @@ reading-time: ~ 10min
                 <dt class="api-dt">Aufgabe</dt>
                 <dd class="api-dd">
                     Abrufen aller Stellplätze der testWare inklusive Stellplatztyp, Details des Raums und Anzahl der Objekte des Stellplatz im Zusatzfeld
-                    <code>objects</code>
+                    <x-code>objects</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>GET</code>
+                    <x-code type="get">GET</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -2638,110 +1717,60 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_get_compartment_list_complete-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_get_compartment_list_complete-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_get_compartment_list_complete-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_get_compartment_list_complete-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >
-                                Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_get_compartment_list_complete-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_get_compartment_list_complete-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_get_compartment_list_complete-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >
-                                Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_get_compartment_list_complete-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_get_compartment_list_complete-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_compartment_list_complete-docs-tab-scheme"
-                        >
-                            -
-                        </div>
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_get_compartment_list_complete-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_compartment_list_complete-docs-tab-response"
-                        >
-
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">[</span>
-    <span class="token punctuation">{</span>
-        <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-        <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 22:23:44"</span><span class="token punctuation">,</span>
-        <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 22:23:44"</span><span class="token punctuation">,</span>
-        <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"SP.7-ru0rxn"</span><span class="token punctuation">,</span>
-        <span class="token property">"type"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"Schubfach"</span><span class="token punctuation">,</span>
-            <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">2</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"quos-repudiandae-et-quia-quas-ad-voluptatem-ratione"</span><span class="token punctuation">,</span>
-        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-        <span class="token property">"room"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"rm-114"</span><span class="token punctuation">,</span>
-            <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"e205dab4-5472-30ba-a774-8b032482d2df"</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token property">"objects"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-            <span class="token property">"equipment"</span><span class="token operator">:</span> <span class="token number">23</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span>...<span class="token punctuation">}</span>
-<span class="token punctuation">]</span></code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                    <x-api-tabs open="response">
+                        <x-slot:request>-</x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">[
+    {
+        "id": 1,
+        "created": "2021-01-06 22:23:44",
+        "updated": "2021-01-06 22:23:44",
+        "label": "SP.7-ru0rxn",
+        "type": {
+            "label": "Schubfach",
+            "id": 2
+        },
+        "name": "quos-repudiandae-et-quia-quas-ad-voluptatem-ratione",
+        "description": null,
+        "room": {
+            "label": "rm-114",
+            "uid": "e205dab4-5472-30ba-a774-8b032482d2df"
+        },
+        "objects": {
+            "equipment": 23
+        }
+    },
+    {...}
+]</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-get-compartment_id">
+        <article id="endpoint-get-compartments_id">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/compartment/{id}</code>
+                    <x-code type="key">/compartment/{id}</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Variable</dt>
                 <dd class="api-dd">
-                    <code>id</code>
-                    <span class="ml-5 badge badge-dark-soft">INTEGER</span>
+                    <x-api-key key="id" type="Integer" noborder />
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Aufgabe</dt>
                 <dd class="api-dd">
-                    Ruft die Daten zum einem Stellplatz mit der <code>id</code>
+                    Ruft die Daten zum einem Stellplatz mit der <x-code>id</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>GET</code>
+                    <x-code type="get">GET</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -2753,76 +1782,31 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_get_compartment_id-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_get_compartment_id-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_get_compartment_id-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_get_compartment_id-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_get_compartment_id-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_get_compartment_id-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_get_compartment_id-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_get_compartment_id-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_get_compartment_id-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_compartment_id-docs-tab-scheme"
-                        >
-                            -
-                        </div>
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_get_compartment_id-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_get_compartment_id-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">{</span>
-    <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-    <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 22:23:44"</span><span class="token punctuation">,</span>
-    <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-06 22:23:44"</span><span class="token punctuation">,</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"SP.7-ru0rxn"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"c9903a08-728a-3067-bf79-ec24ab757713"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"quos-repudiandae-et-quia-quas-ad-voluptatem-ratione"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-    <span class="token property">"compartment_type_id"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
-    <span class="token property">"room_id"</span><span class="token operator">:</span> <span class="token number">9</span>
-<span class="token punctuation">}</span></code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="response">
+                        <x-slot:request>-</x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">{
+    "id": 1,
+    "created": "2021-01-06 22:23:44",
+    "updated": "2021-01-06 22:23:44",
+    "label": "SP.7-ru0rxn",
+    "uid": "c9903a08-728a-3067-bf79-ec24ab757713",
+    "name": "quos-repudiandae-et-quia-quas-ad-voluptatem-ratione",
+    "description": null,
+    "compartment_type_id": 2,
+    "room_id": 9
+}</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-post-compartment">
+        <article id="endpoint-post-compartments">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/compartment</code>
+                    <x-code type="key">/compartment</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -2840,386 +1824,167 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>POST</code>
+                    <x-code type="post">POST</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Felder</dt>
                 <dd class="api-dd">
-                    <p>Erforderliche Felder</p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>label</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                    </ul>
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#compartments_optionals"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="compartments_optionals"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="compartments_optionals"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>uid</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>name</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>description</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>room_id</code>
-                                <span class="badge badge-dark-soft">INTEGER</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <p><code>compartment_type_id</code>
-                                    <span class="badge badge-dark-soft">INTEGER</span>
-                                </p>
-                                <p>oder</p>
-                                <p><code>type</code>
-                                    <span class="badge badge-dark-soft">OBJECT</span>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <p class="mt-3">Wird das Objekt &lt;code&gt;type&lt;/code&gt; verwendet, sind folgende Felder erforderlich</p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>type.label</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                    </ul>
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#compartments_post_optional_type"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="compartments_post_optional_type"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="compartments_post_optional_type"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>type.name</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>type.description</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                        </ul>
-                    </div>
+                   <p class="mt-3 pl-2">Erforderliche Felder</p>
+                    <x-api-key key="label" type="String"  />
+                    <x-api-optionals>
+                        <x-api-key key="uid" type="STRING"  />
+                        <x-api-key key="name" type="STRING"  />
+                        <x-api-key key="description" type="STRING"  />
+                        <x-api-key key="room_id" type="INTEGER"  />
+                        <x-api-key key="compartment_type_id" type="INTEGER"  />
+                        <p class="mt-3 pl-2">oder</p>
+                        <x-api-key key="type" type="OBJECT"  />
+                        <p class="mt-3 pl-2">Wird das Objekt <x-code>type</x-code> verwendet, sind folgende Felder erforderlich</p>
+                        <x-api-key key="label" type="String"  />
+                        <p class="mt-3 pl-2">Optionale Felder</p>
+                        <x-api-key key="type.name" type="String"  />
+                        <x-api-key key="type.description" type="String"  />
+                    </x-api-optionals>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_post_compartment-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_post_compartment-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_post_compartment-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_post_compartment-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_post_compartment-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_post_compartment-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_post_compartment-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_post_compartment-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_post_compartment-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_post_compartment-docs-tab-scheme"
-                        >
-
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">{</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"sp.2118"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"1e0cfa36-e485-36c7-8f26-21c83884a442"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"W.1.2.3.a.12"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Amet minus dolorum at reprehenderit velit iste laudantium..."</span><span class="token punctuation">,</span>
-    <span class="token property">"type"</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"Fach-DIN-3"</span><span class="token punctuation">,</span>
-        <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"Lagerfach für Kästen DIN-3"</span><span class="token punctuation">,</span>
-        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token null keyword">null</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token property">"room_id"</span><span class="token operator">:</span> <span class="token number">5</span>
-<span class="token punctuation">}</span></code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_post_compartment-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_post_compartment-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">{</span>
-    <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">49</span><span class="token punctuation">,</span>
-    <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-07 18:09:37"</span><span class="token punctuation">,</span>
-    <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-07 18:09:37"</span><span class="token punctuation">,</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"sp.2118"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"1e0cfa36-e485-36c7-8f26-21c83884a442"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"W.1.2.3.a.12"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Amet minus dolorum at reprehenderit velit iste laudantium..."</span><span class="token punctuation">,</span>
-    <span class="token property">"compartment_type_id"</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
-    <span class="token property">"room_id"</span><span class="token operator">:</span> <span class="token number">5</span>
-<span class="token punctuation">}</span></code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="response">
+                        <x-slot:request>
+                            <pre class=" language-json"><code class=" language-json">{
+    "label": "sp.2118",
+    "uid": "1e0cfa36-e485-36c7-8f26-21c83884a442",
+    "name": "W.1.2.3.a.12",
+    "description": "Amet minus dolorum at reprehenderit velit iste laudantium...",
+    "type" : {
+        "label": "Fach-DIN-3",
+        "name": "Lagerfach für Kästen DIN-3",
+        "description": null
+    },
+    "room_id": 5
+}</code></pre>
+                        </x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">{
+    "id": 49,
+    "created": "2021-01-07 18:09:37",
+    "updated": "2021-01-07 18:09:37",
+    "label": "sp.2118",
+    "uid": "1e0cfa36-e485-36c7-8f26-21c83884a442",
+    "name": "W.1.2.3.a.12",
+    "description": "Amet minus dolorum at reprehenderit velit iste laudantium...",
+    "compartment_type_id": 4,
+    "room_id": 5
+}</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-put-compartment_id">
+        <article id="endpoint-put-compartments_id">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/compartment/{id}</code>
+                    <x-code type="key">/compartment/{id}</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Variable</dt>
                 <dd class="api-dd">
-                    <code>id</code>
-                    <span class="ml-5 badge badge-dark-soft">INTEGER</span>
+                    <x-api-key key="id" type="Integer" noborder />
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Aufgabe</dt>
                 <dd class="api-dd">
-                    Aktualisiert die Daten eines Stellplatzes mit der Referenz <code>{id}</code>.
+                    Aktualisiert die Daten eines Stellplatzes mit der Referenz <x-code>{id}</x-code>.
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>PUT</code>
+                    <x-code type="put">PUT</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Felder</dt>
                 <dd class="api-dd">
-                    <p>Erforderliche Felder</p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>label</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                    </ul>
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#compartments_put_optionals"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="compartments_put_optionals"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="compartments_put_optionals"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>uid</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>name</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>description</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>room_id</code>
-                                <span class="badge badge-dark-soft">INTEGER</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <p><code>compartment_type_id</code>
-                                    <span class="badge badge-dark-soft">INTEGER</span>
-                                </p>
-                                <p>oder</p>
-                                <p><code>type</code>
-                                    <span class="badge badge-dark-soft">OBJECT</span>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <p class="mt-3">Wird das Objekt &lt;code&gt;type&lt;/code&gt; verwendet, sind folgende Felder erforderlich</p>
-                    <ul class="list-group list-group-flush mb-3">
-                        <li class="list-group-item d-flex align-items-center justify-content-between">
-                            <code>type.label</code>
-                            <span class="badge badge-dark-soft">STRING</span>
-                        </li>
-                    </ul>
-                    <a class="btn btn-sm btn-outline-dark-soft btn-pill"
-                       data-toggle="collapse"
-                       href="#compartments_put_optional_type"
-                       role="button"
-                       aria-expanded="false"
-                       aria-controls="compartments_put_optional_type"
-                    >Optionale Felder
-                    </a>
-                    <div class="collapse"
-                         id="compartments_put_optional_type"
-                    >
-                        <ul class="list-group list-group-flush mb-3">
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>type.name</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                            <li class="list-group-item d-flex align-items-center justify-content-between">
-                                <code>type.description</code>
-                                <span class="badge badge-dark-soft">STRING</span>
-                            </li>
-                        </ul>
-                    </div>
+                    <p class="mt-3 pl-2">Erforderliche Felder</p>
+                    <x-api-key key="label" type="String"  />
+                  <x-api-optionals>
+                      <x-api-key key="uid" type="STRING"  />
+                      <x-api-key key="name" type="STRING"  />
+                      <x-api-key key="description" type="STRING"  />
+                      <x-api-key key="room_id" type="INTEGER"  />
+                      <x-api-key key="compartment_type_id" type="INTEGER"  />
+                      <p class="mt-3 pl-2">oder</p>
+                      <x-api-key key="type" type="OBJECT"  />
+                      <p class="mt-3 pl-2">Wird das Objekt <x-code>type</x-code> verwendet, sind folgende Felder erforderlich</p>
+                      <x-api-key key="label" type="String"  />
+                      <p class="mt-3 pl-2">Optionale Felder</p>
+                      <x-api-key key="type.name" type="String"  />
+                      <x-api-key key="type.description" type="String"  />
+                  </x-api-optionals>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">JSON</dt>
                 <dd class="api-dd">
-                    <ul class="nav nav-bordered"
-                        id="api_put_compartment_id-docs-tab"
-                        role="tablist"
-                    >
-                        <li class="nav-item">
-                            <a class="nav-link active"
-                               id="api_put_compartment_id-docs-tab-scheme"
-                               data-toggle="tab"
-                               href="#api_put_compartment_id-docs-tab-scheme-content"
-                               role="tab"
-                               aria-controls="api_put_compartment_id-docs-tab-tab1-content"
-                               aria-selected="true"
-                            >Senden
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               id="api_put_compartment_id-docs-tab-response"
-                               data-toggle="tab"
-                               href="#api_put_compartment_id-docs-tab-response-content"
-                               role="tab"
-                               aria-controls="api_put_compartment_id-docs-tab-tab2-content"
-                               aria-selected="false"
-                            >Antwort
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="tab-content"
-                         id="api_put_compartment_id-docs-tabContent"
-                    >
-                        <div class="tab-pane bg-light fade p-3 show active"
-                             id="api_put_compartment_id-docs-tab-scheme-content"
-                             role="tabpanel"
-                             aria-labelledby="api_put_compartment_id-docs-tab-scheme"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">{</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"rm-118"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"1e0cfa36-e485-36c7-8f26-21c83884a442"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"quis"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Amet minus dolorum at reprehenderit velit iste laudantium..."</span><span class="token punctuation">,</span>
-    <span class="token property">"compartment_type_id"</span> <span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-    <span class="token property">"building_id"</span><span class="token operator">:</span> <span class="token number">5</span>
-<span class="token punctuation">}</span></code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane bg-light fade p-3"
-                             id="api_put_compartment_id-docs-tab-response-content"
-                             role="tabpanel"
-                             aria-labelledby="api_put_compartment_id-docs-tab-response"
-                        >
-                            <div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">{</span>
-    <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">50</span><span class="token punctuation">,</span>
-    <span class="token property">"created"</span><span class="token operator">:</span> <span class="token string">"2021-01-07 21:33:02"</span><span class="token punctuation">,</span>
-    <span class="token property">"updated"</span><span class="token operator">:</span> <span class="token string">"2021-01-07 22:18:11"</span><span class="token punctuation">,</span>
-    <span class="token property">"label"</span><span class="token operator">:</span> <span class="token string">"sp.2112"</span><span class="token punctuation">,</span>
-    <span class="token property">"uid"</span><span class="token operator">:</span> <span class="token string">"1e0cfa36-e485-36c7-8f26-21c838842442"</span><span class="token punctuation">,</span>
-    <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"W.1.2.3.a.12"</span><span class="token punctuation">,</span>
-    <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Amet minuszf dolorum at reprehenderit velit iste laudantium..."</span><span class="token punctuation">,</span>
-    <span class="token property">"compartment_type_id"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
-    <span class="token property">"room_id"</span><span class="token operator">:</span> <span class="token number">5</span>
-<span class="token punctuation">}</span></code></pre>
-                                <div class="toolbar">
-                                    <div class="toolbar-item">
-                                        <button type="button">Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="response">
+                        <x-slot:request>
+                            <pre class=" language-json"><code class=" language-json">{
+    "label": "rm-118",
+    "uid": "1e0cfa36-e485-36c7-8f26-21c83884a442",
+    "name": "quis",
+    "description": "Amet minus dolorum at reprehenderit velit iste laudantium...",
+    "compartment_type_id" : 1,
+    "building_id": 5
+}</code></pre>
+                        </x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">{
+    "id": 50,
+    "created": "2021-01-07 21:33:02",
+    "updated": "2021-01-07 22:18:11",
+    "label": "sp.2112",
+    "uid": "1e0cfa36-e485-36c7-8f26-21c838842442",
+    "name": "W.1.2.3.a.12",
+    "description": "Amet minuszf dolorum at reprehenderit velit iste laudantium...",
+    "compartment_type_id": 1,
+    "room_id": 5
+}</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>
         <hr>
-        <article id="endpoint-delete-compartment_id">
+        <article id="endpoint-delete-compartments_id">
             <dl class="api-dl">
                 <dt class="api-dt">Endpunkt</dt>
                 <dd class="api-dd">
-                    <code>/api/v1/compartment/{id}</code>
+                    <x-code type="key">/compartment/{id}</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Variable</dt>
                 <dd class="api-dd">
-                    <code>id</code>
-                    <span class="ml-5 badge badge-dark-soft">INTEGER</span>
+                    <x-api-key key="id" type="Integer" noborder />
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Aufgabe</dt>
                 <dd class="api-dd">
-                    Löscht den Stellplatz mit der Referenz <code>{id}</code>.
+                    Löscht den Stellplatz mit der Referenz <x-code>{id}</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
                 <dt class="api-dt">Methode</dt>
                 <dd class="api-dd">
-                    <code>DELETE</code>
+                    <x-code type="delete">DELETE</x-code>
                 </dd>
             </dl>
             <dl class="api-dl">
@@ -3231,15 +1996,16 @@ reading-time: ~ 10min
             <dl class="api-dl">
                 <dt class="api-dt">Antwort</dt>
                 <dd class="api-dd">
-                    <div class="code-toolbar"><pre class=" language-json"><code class=" language-json"><span class="token punctuation">{</span>
-    <span class="token property">"status"</span> <span class="token operator">:</span> <span class="token string">"compartment deleted"</span>
-<span class="token punctuation">}</span></code></pre>
-                        <div class="toolbar">
-                            <div class="toolbar-item">
-                                <button type="button">Copy</button>
-                            </div>
-                        </div>
-                    </div>
+                    <x-api-tabs open="response">
+                        <x-slot:request>
+                            <pre class=" language-json"><code class=" language-json"></code></pre>
+                        </x-slot:request>
+                        <x-slot:response>
+                            <pre class=" language-json"><code class=" language-json">{
+    "status" : "compartment deleted"
+}</code></pre>
+                        </x-slot:response>
+                    </x-api-tabs>
                 </dd>
             </dl>
         </article>

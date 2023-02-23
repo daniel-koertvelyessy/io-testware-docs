@@ -237,6 +237,8 @@ label {
     @apply grid-cols-1;
     @apply lg:grid-cols-5;
     @apply gap-4;
+    @apply my-3;
+    @apply items-center;
 }
 
 .api-dt{

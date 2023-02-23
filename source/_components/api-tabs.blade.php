@@ -1,4 +1,5 @@
-<div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) :'{{ $open  }}'}">
+<!--<div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) :'{{ $open  }}' }">-->
+<div x-data="{ tab: '{{ $open??'request'  }}' }">
 
     <div class="border-b border-slate-200">
         <nav class="-mb-px flex space-x-8"
@@ -22,4 +23,5 @@
 
     <section x-show="tab === 'request'">{{ $request }}</section>
     <section x-show="tab === 'response'">{{ $response }}</section>
+
 </div>

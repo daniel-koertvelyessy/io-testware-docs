@@ -9,13 +9,13 @@ reading-time: ~ 3min
     <h1>Endpunkte</h1>
     <section id="definitions">
         <article>
-            <p>Auf den folgenden Seiten finden Sie alle Endpunkte der testware API. Zur leichteren Verwendung finden hier eine Auflistung der verwendeten Nomenklatur nebst einer kurzen Erklärung</p>
+            <p>Auf den folgenden Seiten finden Sie alle Endpunkte der testWare API. Zur leichteren Verwendung finden hier eine Auflistung der verwendeten Nomenklatur nebst einer kurzen Erklärung</p>
             <dl class="flex space-x-4">
                 <dt><x-code>Endpunkt</x-code></dt>
                 <dd>
                     Adresse des Endpunktes ohne Domainnamen. Damit der Zurgiff stattfinden kann muss der komplette mit Domainnamen als Adresse verwendet werden. Beispiel: der Endpunkt
-                    <x-code type="dark">/api/v1/status</x-code> würde mit dem Domainnamen
-                    <x-code type="dark">https://testware.io</x-code> müsste als komplette Adressse
+                    <x-code type="dark">/status</x-code> würde mit der aktuellen Version und dem Domainnamen
+                    <x-code type="dark">https://testware.io/api/v1</x-code> als komplette Adressse
                     <x-code type="dark">https://testware.io/api/vi/status</x-code> lauten.
                 </dd>
             </dl>
@@ -25,14 +25,14 @@ reading-time: ~ 3min
                     <p>Wenn zur Identifizierung eines Objektes eine Variable benötigt wird wird dies in
                         <x-code>{ }</x-code> angegeben.</p>
                     <p>Beispiel:</p>
-                    <p>Für den Endpunkt <x-code type="dark">api/v1/location/{id}</x-code> ist
+                    <p>Für den Endpunkt <x-code type="dark">/location/{id}</x-code> ist
                         <x-code>id</x-code> die Variable. Ein Objekt mit der id 1 wird dann als
-                        <x-code type="dark">api/v1/location/1</x-code> abgerufen.</p>
+                        <x-code type="dark">/location/1</x-code> abgerufen.</p>
                     <p>Möchte man die Anzahl der Datensätze pro Abruf begrenzen so kann man hinter dem Endpunkt ein
                         <span class="badge badge-dark">?per_page=x</span>
                        anfügen. <x-code>x</x-code> steuert hierbei die Anzahl der Datensätze pro Seite.
                     </p>
-                    <p>Beispiel des Endpunktes für Lagerfächer <x-code type="dark">api/v1/compartment?per_page=10</x-code></p>
+                    <p>Beispiel des Endpunktes für Lagerfächer <x-code type="dark">/compartment?per_page=10</x-code></p>
                     <pre><code class="language-json">{
     "data": [
         {
@@ -45,7 +45,6 @@ reading-time: ~ 3min
             "description": null,
             "type_id": 2,
             "room_id": 9
-        },
         },
         {...}
     ],
@@ -92,7 +91,7 @@ reading-time: ~ 3min
                 <dt class="col-sm-2"><x-code>JSON</x-code></dt>
                 <dd class="col-sm-10">
                     <p>JSON Schema für die Antwort der API oder das notwendige Schema zum Senden von Daten zur API.
-                        <br>Beispiel für die Antwort des Endpunktes <x-code>/api/v1/status</x-code> mit der
+                        <br>Beispiel für die Antwort des Endpunktes <x-code>/status</x-code> mit der
                         <x-code>GET</x-code> Methode:</p>
                     <pre><code class="language-json">
 {
@@ -123,35 +122,35 @@ reading-time: ~ 3min
                         <tr>
                             <td>Text</td>
                             <td>
-                                <x-code>STRING</x-code>
+                                <x-code type="type">STRING</x-code>
                             </td>
                             <td><x-code>Hallo Welt!</x-code></td>
                         </tr>
                         <tr>
                             <td>Ganze Zahl</td>
                             <td>
-                                <x-code>INTEGER</x-code>
+                                <x-code type="type">INTEGER</x-code>
                             </td>
                             <td><x-code>10</x-code></td>
                         </tr>
                         <tr>
                             <td>Dezinmalzahl</td>
                             <td>
-                                <x-code>FLOAT</x-code>
+                                <x-code type="type">FLOAT</x-code>
                             </td>
                             <td><x-code>1.3</x-code></td>
                         </tr>
                         <tr>
                             <td>Boolscher Wert (Wahr/Falsch)</td>
                             <td>
-                                <x-code>BOOLEAN</x-code>
+                                <x-code type="type">BOOLEAN</x-code>
                             </td>
                             <td><x-code>true</x-code> oder <x-code>false</x-code></td>
                         </tr>
                         <tr style="vertical-align: top;">
                             <td>Objekt</td>
                             <td>
-                                <x-code>OBJECT</x-code>
+                                <x-code type="type">OBJECT</x-code>
                             </td>
                             <td>
                                 Sammlung von weiteren Feldern mit <x-code>{ }</x-code> umschlossen.
@@ -173,8 +172,6 @@ reading-time: ~ 3min
                         gekennzeichnet. Wenn ein Feld explizit leer gelassen werden soll ist der Wert
                         <x-code>null</x-code> einzutragen.
                     </x-note>
-
-
                 </dd>
             </dl>
             <dl class="flex space-x-4">
