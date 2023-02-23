@@ -231,3 +231,19 @@ label {
     @apply border-main-500;
     @apply text-main-600;
 }
+
+.api-dl{
+    @apply grid;
+    @apply grid-cols-1;
+    @apply lg:grid-cols-5;
+    @apply gap-4;
+}
+
+.api-dt{
+    @apply col-span-1;
+}
+
+.api-dd{
+    @apply col-span-1;
+    @apply lg:col-span-4;
+}

@@ -39,24 +39,27 @@ reading-time: ~ 3min
 @endsection
 @section('content')
 
-    <h1 id="installation-lemp-header">Installation</h1>
-
-    <p>Die Abkürzungen LEMP/LAMP stehen für <span class="font-semibold">L</span>inux <span class="font-semibold">A</span>pache <span class="font-semibold">M</span>ySQL <span class="font-semibold">P</span>HP bzw. <span class="font-semibold">L</span>inux <span class="font-semibold">N</span>ginx (ausgesprochen engine-x) <span class="font-semibold">M</span>ariaDB und
-        <span class="font-semibold">P</span>HP. </p>
+    <h1 id="installation-lemp-header">Installation mit Webserver</h1>
+    <p>Traditionell wird die testWare auf LAMP/LEMP/LEPP Webserver installiert.</p>
+    <p>Die Abkürzungen stehen für <span class="font-semibold">L</span>inux <span class="font-semibold">A</span>pache <span class="font-semibold">M</span>ySQL <span class="font-semibold">P</span>HP, <span class="font-semibold">L</span>inux <span class="font-semibold">N</span>ginx (ausgesprochen engine-x) <span class="font-semibold">M</span>ariaDB und
+        <span class="font-semibold">P</span>HP bzw. <span class="font-semibold">L</span>inux <span class="font-semibold">N</span>ginx (ausgesprochen engine-x) <span class="font-semibold">P</span>ostgreSQL und
+        <span class="font-semibold">P</span>HP</p>
     <h2 id="installation-lemp-requirements">Voraussetzungen</h2>
     <p>Für eine erfolgreiche Installation müssen folgende Voraussetzungen erfüllt sein:</p>
     <ul class="list-inside">
-        <li>Linux basiertes system (Ubuntu oder Debian)</li>
-        <li>Apache server (oder nginx reverse proxy)</li>
+        <li>Linux basiertes System (Ubuntu oder Debian)</li>
+        <li>Apache Server (oder nginx reverse proxy)</li>
         <li>php min. Version 7.4</li>
         <li>SQL Datenbankserver PostgreSQL oder MariaDB / mySQL</li>
         <li>Paketmanager für php <a href="https://getcomposer.org/" target="_blank">Composer</a> installiert</li>
         <li>Paketmanager für JavaScript / Node.js <a href="https://www.npmjs.com/" target="_blank">npm</a> installiert</li>
         <li>Die Versionsverwaltung <a href="https://git-scm.com/" target="_blank">git</a></li>
     </ul>
+    <p>Die Installation und Konfiguration der entsprechenden Pakete würde den Rahmen dieser Dokumentation sprengen. Im Internet sind aber zahlreiche Anleitungen zu finden. Als Beispiel sei hier die auf die hervorragende Beschreibung auf
+        <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-laravel-with-nginx-on-ubuntu-22-04">Digitalocean</a> verwiesen.</p>
 
     <h2 id="installation-lemp-repository">Schritt 1: testWare Repository laden</h2>
-    <p>Im Wurzelverzeichnis des Servers zum Beispiel <x-code>/var/www</x-code> wird ein neues Verzeichnis angelegt.</p>
+    <p>Im Stammverzeichnis des Servers, zum Beispiel <x-code>/var/www</x-code> wird ein neues Verzeichnis angelegt.</p>
     <pre><code class="language-bash">mkdir testware</code></pre>
     <p>In diesem Verzeichnis wird die aktuelle Version der testWare mit git geladen.</p>
     <pre><code class="language-bash">/var/www: cd testware
@@ -64,7 +67,7 @@ reading-time: ~ 3min
     <p>Nachdem die Dateien geladen werden, müssen die abhängigen Pakete installiert werden. Das erreicht man über die Befehle:</p>
     <pre><code class="language-bash">npm install</code></pre>
     <pre><code class="language-bash">composer install</code></pre>
-    <p>Nachdem dies erfolgt ist wird eine Datei <x-code>.env</x-code> erstellt. Wichtig ist der Punkt vor env.</p>
+    <p>Nachdem dies erfolgt, ist wird eine Datei <x-code>.env</x-code> erstellt. Wichtig ist der Punkt vor env.</p>
     <pre><code class="language-bash">vim .env</code></pre>
     <x-note>Es kann natürlich jeder anderer Texteditor wie nano, vi oder emacs verwendet werden.</x-note>
     <p>In diese leere Datei werden folgende Zeilen eingeführt:</p>
@@ -95,14 +98,14 @@ DB_PASSWORD=[passworrd]
     <p>Im Beispiel oben ist für eine PostgreSQL Datenbank eingetragen. Soll eine MySQL / MariaDB verwendet werden, muss für den Schlüssel <x-code>DB_CONNECTION</x-code> als Wert <x-code>mysql</x-code> und als Port <x-code>3306</x-code> vorgesehen. Bitte lesen Sie Dokumentation Ihrer Datenbank bezüglich der verwendeten Ports.</p>
     <x-note type="danger">Beachten Sie, dass der Benutzer und das Passwort exakt übereinstimmen. Auch wird von der Verwendung des root als Benutzer aus Sicherheitsgründen dringend abgeraten.</x-note>
 
-    <h2 id="installation-lemp-installer">Schritt 3: Ausführen des testWare Installer</h2>
+    <h2 id="installation-lemp-installer">Schritt 3: Ausführen des testWare Installers</h2>
     <h3>In der Konsole</h3>
-    <p>Im Wurzelverzeichnis wird folgender Befehl ausgeführt.</p>
+    <p>Im Stammverzeichnis wird folgender Befehl ausgeführt.</p>
     <pre><code class="language-bash">php artisan testware:install</code></pre>
-    <p>Mit diesem Programm richten Sie unter anderem den System-Administrator ein und legen die Tabellen in der Datenbank an.</p>
+    <p>Mit diesem Programm richten Sie unter anderem den Systemadministrator ein und legen die Tabellen in der Datenbank an.</p>
 
     <h3>Webinstaller</h3>
-    <p>Ist das Programm abgeschlossen, wird die Einrichtung im Webbrowser forgeführt. Dazu wird er Link <x-code>domain.tld/installer</x-code> aufgerufen, wobei <span class="font-semibold">domain.tld</span> mit der echten Adresse des Webservers ersetzt werden sollte.</p>
+    <p>Ist das Programm abgeschlossen, wird die Einrichtung im Webbrowser fortgeführt. Dazu wird er Link <x-code>domain.tld/installer</x-code> aufgerufen, wobei <span class="font-semibold">domain.tld</span> mit der echten Adresse des Webservers ersetzt werden sollte.</p>
 
     <hr>
 

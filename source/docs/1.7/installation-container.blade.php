@@ -1,7 +1,7 @@
 ---
-title: Allgemeines zur testWare
-description: Dieser Abschntt beschäftigt sich mit der grafischen Oberfläche, Prozess- und Objektstrukturen
-reading-time: ~ 3min
+title: Installation der testWare mit Container
+description: Seit die Einführung von Container-Laufzeiten wie Docker oder Podman ist die Installation der testWare in wenigen Schritten erfolgt
+reading-time: ~ 10min
 ---
 @extends('_layouts/documentation')
 @section('nav-docs')
@@ -43,7 +43,7 @@ reading-time: ~ 3min
 @endsection
 @section('content')
 
-    <h1 id="general-ui-header">Installation - Container</h1>
+    <h1 id="general-ui-header">Installation mit Container</h1>
     <h2 id="installation-docker-requirements">Voraussetzungen</h2>
     <p>Der Betrieb einer testWare Instanz mit docker-compose benötigt lediglich zwei Voraussetzungen: </p>
     <ul class="list-inside">

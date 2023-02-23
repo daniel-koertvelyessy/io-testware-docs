@@ -113,7 +113,7 @@ reading-time: ~ 10min
   "timeout": 0,
   "headers": {
     "Accept": "application/json",
-    "Authorization": "Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "Authorization": "Bearer xxxxxxxxxxxxxxxxxxxxxxxxxx",
     "Content-Type": "application/json"
   }
 };
