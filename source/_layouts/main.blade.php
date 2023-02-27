@@ -173,7 +173,7 @@
         </section>
         <section class="bg-slate-200 m-0 p-4 text-xs font-sans ">
             <div class="grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 items-center max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto">
-                <div class="flex flex-row justify-between sm:justify-start py-4 sm:py-1 text-sm sm:text-xs">
+                <div class="flex flex-col space-y-3 sm:space-y-0 sm:flex-row text-center justify-between sm:justify-start py-4 sm:py-1 text-sm sm:text-xs">
                     <a href="/datenschutz"
                        class="sm:mr-2 text-main-700 {{ $page->isActive('/datenschutz') ? 'active text-main-600 underline' : '' }}"
                        title="Unsere Datenschutzerklärung"
@@ -189,7 +189,7 @@
                        title="Impressum"
                     >Impressum
                     </a>
-                    <a href="http://ec.europa.eu/consumers/odr/"
+                    <a href="https://ec.europa.eu/consumers/odr/"
                        title="ODR-Platform"
                        target="_blank"
                        class="text-main-700"

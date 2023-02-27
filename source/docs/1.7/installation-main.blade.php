@@ -1,7 +1,7 @@
 ---
-title: Allgemeines zur testWare
-description: Dieser Abschntt beschäftigt sich mit der grafischen Oberfläche, Prozess- und Objektstrukturen
-reading-time: ~ 3min
+title: Installation der testWare
+description: Die Installation der testWare erfolgt in drei Schritten. Installation der Instanz, Einrichtung der Datanbank und Anlegen von Benutzern.
+reading-time: ~ 1min
 ---
 @extends('_layouts/documentation')
 @section('content')
@@ -18,7 +18,14 @@ reading-time: ~ 3min
         <x-overview-item header="Container" link="/docs/1.7/installation-container">
             Die Idee, mehrere Server auf einer Hardware laufen zu lassen wurde ab 2013 mit Docker sehr einfach. Daher ist die Installation der testWare über Docker / Podman die einfachste Art.
         </x-overview-item>
+        <x-overview-item header="Terminal" link="/docs/1.7/installation-console">
+            Nach erfolgter Installation der testWare Instanz wird der Systemadministrator und die Datenbank im Terminal angelegt.
+        </x-overview-item>
+        <x-overview-item header="Browser" link="/docs/1.7/installation-webui">
+            Als letzten Schritt wird der primäre Standort und weitere Benutzer angelegt. Damit ist die Installation abgeschlossen.
+        </x-overview-item>
     </section>
+
 
 
 @endsection

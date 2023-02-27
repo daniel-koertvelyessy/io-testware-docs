@@ -249,3 +249,11 @@ label {
     @apply col-span-1;
     @apply lg:col-span-4;
 }
+
+.figcap{
+    @apply text-xs;
+    @apply text-center;
+    @apply lg:text-right;
+    @apply text-slate-400;
+    @apply lg:pr-3;
+}

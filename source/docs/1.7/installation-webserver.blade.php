@@ -9,27 +9,27 @@ reading-time: ~ 3min
 
         $navigation = [
             [
-                'link' => 'installation-lemp-requirements',
-                'header' => 'Voraussetzngen'
+                'link' => 'installation-webserver-requirements',
+                'header' => 'Voraussetzungen'
             ],
             [
-                'link' => 'installation-lemp-repository',
+                'link' => 'installation-webserver-repository',
                 'header' => 'Repository laden'
             ],
             [
-                'link' => 'installation-lemp-database',
+                'link' => 'installation-webserver-database',
                 'header' => 'Datenbank einrichten'
             ],
             [
-                'link' => 'installation-lemp-installer',
+                'link' => 'installation-webserver-installer',
                 'header' => 'Ausführen des Installers'
             ],
             [
-                'link' => 'installation-lemp-email',
+                'link' => 'installation-webserver-email',
                 'header' => 'E-Mail Server einrichten'
             ],
             [
-                'link' => 'installation-lemp-sample',
+                'link' => 'installation-webserver-sample',
                 'header' => 'Beispiel .env'
             ],
     ];
@@ -39,12 +39,12 @@ reading-time: ~ 3min
 @endsection
 @section('content')
 
-    <h1 id="installation-lemp-header">Installation mit Webserver</h1>
+    <h1 id="installation-webserver-header">Installation mit Webserver</h1>
     <p>Traditionell wird die testWare auf LAMP/LEMP/LEPP Webserver installiert.</p>
     <p>Die Abkürzungen stehen für <span class="font-semibold">L</span>inux <span class="font-semibold">A</span>pache <span class="font-semibold">M</span>ySQL <span class="font-semibold">P</span>HP, <span class="font-semibold">L</span>inux <span class="font-semibold">N</span>ginx (ausgesprochen engine-x) <span class="font-semibold">M</span>ariaDB und
         <span class="font-semibold">P</span>HP bzw. <span class="font-semibold">L</span>inux <span class="font-semibold">N</span>ginx (ausgesprochen engine-x) <span class="font-semibold">P</span>ostgreSQL und
         <span class="font-semibold">P</span>HP</p>
-    <h2 id="installation-lemp-requirements">Voraussetzungen</h2>
+    <h2 id="installation-webserver-requirements">Voraussetzungen</h2>
     <p>Für eine erfolgreiche Installation müssen folgende Voraussetzungen erfüllt sein:</p>
     <ul class="list-inside">
         <li>Linux basiertes System (Ubuntu oder Debian)</li>
@@ -58,7 +58,7 @@ reading-time: ~ 3min
     <p>Die Installation und Konfiguration der entsprechenden Pakete würde den Rahmen dieser Dokumentation sprengen. Im Internet sind aber zahlreiche Anleitungen zu finden. Als Beispiel sei hier die auf die hervorragende Beschreibung auf
         <a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-laravel-with-nginx-on-ubuntu-22-04">Digitalocean</a> verwiesen.</p>
 
-    <h2 id="installation-lemp-repository">Schritt 1: testWare Repository laden</h2>
+    <h2 id="installation-webserver-repository">Schritt 1: testWare Repository laden</h2>
     <p>Im Stammverzeichnis des Servers, zum Beispiel <x-code>/var/www</x-code> wird ein neues Verzeichnis angelegt.</p>
     <pre><code class="language-bash">mkdir testware</code></pre>
     <p>In diesem Verzeichnis wird die aktuelle Version der testWare mit git geladen.</p>
@@ -85,7 +85,7 @@ APP_DEBUG=false</code></pre>
 && chmod -R ug+rwx /var/www/html/storage /var/www/html/bootstrap/cache</code></pre>
     <p>Dieser Vorgang kann abhängig vom System ein paar Minuten dauern. Nach Abschluss ist die testWare von der Codeseite aus fertig. Nun muss die Datenbank eingerichtet werden.</p>
     <hr>
-    <h2 id="installation-lemp-database">Schritt 2: Datenbank einrichten</h2>
+    <h2 id="installation-webserver-database">Schritt 2: Datenbank einrichten</h2>
 
     <p>Durch Einfügen der folgenden Zeilen in die <x-code>.env</x-code> Datei erhält die testWare die Möglichkeit, mit der Datenbank zu kommunizieren.</p>
     <pre><code class="language-markup">DB_CONNECTION=pgsql
@@ -98,18 +98,18 @@ DB_PASSWORD=[passworrd]
     <p>Im Beispiel oben ist für eine PostgreSQL Datenbank eingetragen. Soll eine MySQL / MariaDB verwendet werden, muss für den Schlüssel <x-code>DB_CONNECTION</x-code> als Wert <x-code>mysql</x-code> und als Port <x-code>3306</x-code> vorgesehen. Bitte lesen Sie Dokumentation Ihrer Datenbank bezüglich der verwendeten Ports.</p>
     <x-note type="danger">Beachten Sie, dass der Benutzer und das Passwort exakt übereinstimmen. Auch wird von der Verwendung des root als Benutzer aus Sicherheitsgründen dringend abgeraten.</x-note>
 
-    <h2 id="installation-lemp-installer">Schritt 3: Ausführen des testWare Installers</h2>
+    <h2 id="installation-webserver-installer">Schritt 3: Ausführen des testWare Installers</h2>
     <h3>In der Konsole</h3>
     <p>Im Stammverzeichnis wird folgender Befehl ausgeführt.</p>
     <pre><code class="language-bash">php artisan testware:install</code></pre>
     <p>Mit diesem Programm richten Sie unter anderem den Systemadministrator ein und legen die Tabellen in der Datenbank an.</p>
 
-    <h3>Webinstaller</h3>
+    <h3 id="installation-webserver-webinstaller">Webinstaller</h3>
     <p>Ist das Programm abgeschlossen, wird die Einrichtung im Webbrowser fortgeführt. Dazu wird er Link <x-code>domain.tld/installer</x-code> aufgerufen, wobei <span class="font-semibold">domain.tld</span> mit der echten Adresse des Webservers ersetzt werden sollte.</p>
 
     <hr>
 
-    <h2 id="installation-lemp-email">Optionaler Schritt 4: E-Mail Server einrichten</h2>
+    <h2 id="installation-webserver-email">Optionaler Schritt 4: E-Mail Server einrichten</h2>
     <p>Die testWare kann Benachrichtigungen über E-Mail versenden. Dazu müssen folgende Zeilen in die <x-code>.env</x-code> eingetragen werden:</p>
 <pre><code class="language-markup">MAIL_MAILER=smtp
 MAIL_HOST=[smpt.provider-address.com]
@@ -122,7 +122,7 @@ MAIL_FROM_NAME="${APP_NAME}"
 </code></pre>
     <x-note>Wenn der Versand per E-Mail nicht gewünscht ist bitte statt der Zeile <x-code>MAIL_MAILER=smtp</x-code> statt dem Wert <x-code>smtp</x-code> den Wert <x-code>log</x-code> verwenden.</x-note>
 
-    <h2 id="installation-lemp-sample">Beispiel .env</h2>
+    <h2 id="installation-webserver-sample">Beispiel .env</h2>
     <pre><code class="language-bash"># testWare Umgebung
 APP_URL="https://db.domain.tld"
 APP_PORT=443

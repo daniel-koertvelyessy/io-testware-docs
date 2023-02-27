@@ -11,7 +11,7 @@
         <p class="nav-menu__item text-slate-600">{{ $label }}</p>
     @endif
 
-    @if (! is_string($item) && $item->children)
+    @if (! is_string($item) && $item->children && ($page->isActive($url) || $page->isActiveParent($item)))
         {{-- Recursively handle children --}}
         @include('_nav.menu', ['items' => $item->children, 'level' => ++$level])
     @endif
