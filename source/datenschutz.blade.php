@@ -1,12 +1,12 @@
 ---
-title: Impressum • thermo-control.com
-description: thermo-control.com wird gepfelgt von thermo-control Körtvélyessy GmbH • Grünspechtweg 19 • 13469 Berlin • DE120051020
+title: Datenschutzerklärung
+description: testware.io wird gepfelgt von thermo-control Körtvélyessy GmbH • Grünspechtweg 19 • 13469 Berlin • DE120051020
 readingTime: ca. 8 Minuten
 ---
 @extends('_layouts.main')
 
 @section('body')
-
+    <section class="container max-w-6xl mx-auto px-6 py-10 md:py-12">
     <h1 class="sm:text-4xl text-5xl">Datenschutzerklärung</h1>
 
     <h2 class="text-2xl">Datenschutz</h2>
@@ -22,9 +22,11 @@ readingTime: ca. 8 Minuten
             <li><span class="font-bold">www.thermo-control.shop</span></li>
             <li><span class="font-bold">www.thermoelemente.berlin</span></li>
             <li><span class="font-bold">www.te_id.app</span></li>
-            <li><span class="font-bold">www.testware.io</span></li>
+            <li><span class="font-bold">www.testware.io</span><br>
+                <span class="text-sm ml-5">inklusive aller sogenannten Sub-Domains docs.testware.io oder demo.testware.io</span></li>
         </ul>
-        <div>
+        <hr>
+        <div class="mt-10">
             <h4><span class="font-bold">1. Zugriffsdaten und Hosting</span></h4>
             <p>Sie können unsere Webseiten besuchen, ohne Angaben zu Ihrer Person zu machen. Bei jedem Aufruf einer Webseite speichert der Webserver lediglich automatisch ein sogenanntes Server-Logfile, das z.B. den Namen der angeforderten Datei, Ihre IP-Adresse, Datum und Uhrzeit des Abrufs, übertragene Datenmenge und den anfragenden Provider (Zugriffsdaten) enthält und den Abruf dokumentiert.</p>
             <p>Diese Zugriffsdaten werden ausschließlich zum Zwecke der Sicherstellung eines störungsfreien Betriebs der Seite sowie der Verbesserung unseres Angebots ausgewertet. Dies dient gemäß Art. 6 Abs. 1 S. 1 lit. f DSGVO der Wahrung unserer im Rahmen einer Interessensabwägung überwiegenden berechtigten Interessen an einer korrekten Darstellung unseres Angebots. Alle Zugriffsdaten werden spätestens sieben Tage nach Ende Ihres Seitenbesuchs gelöscht.</p>
@@ -63,8 +65,8 @@ readingTime: ca. 8 Minuten
             <h4><span class="font-bold">6. Cookies und Webanalyse</span></h4>
             <section class="p-6 my-10 border border-red-600 rounded-xl">
                 <span class="font-bold text-xl">Wichtiger Hinweis</span>
-                <p>Wir verwenden auf
-                    <span class="font-extrabold text-red-600">www.thermo-control.com</span> bewusst keine Cookies oder Webanalyse Tools. Ihre Rückmeldung ist unsere Messlatte zum Erfolg der Webseite. Daher werden Sie nicht aufgefordert Cookies oder dergleichen zu akzeptieren.</p>
+                <p>Wie auch bei <a href="https://thermo-control.com" target="_blank" class="font-bold">thermo-control.com</a> verwenden wir auf
+                    <span class="font-extrabold text-red-600">docs.testware.io</span> bewusst keine Cookies oder Webanalyse Tools. Ihre Rückmeldung ist unsere Messlatte zum Erfolg der Webseite. Daher werden Sie nicht aufgefordert Cookies oder dergleichen zu akzeptieren.</p>
             </section>
             <p>Um den Besuch unserer Website attraktiv zu gestalten und die Nutzung bestimmter Funktionen zu ermöglichen, um passende Produkte anzuzeigen oder zur Marktforschung verwenden wir auf verschiedenen Seiten sogenannte Cookies. Dies dient der Wahrung unserer im Rahmen einer Interessensabwägung überwiegenden berechtigten Interessen an einer optimierten Darstellung unseres Angebots gemäß Art. 6 Abs. 1 S. 1 lit. f DSGVO. Cookies sind kleine Textdateien, die automatisch auf Ihrem Endgerät gespeichert werden. Einige der von uns verwendeten Cookies werden nach Ende der Browser-Sitzung, also nach Schließen Ihres Browsers, wieder gelöscht (sog. Sitzungs-Cookies). Andere Cookies verbleiben auf Ihrem Endgerät und ermöglichen uns, Ihren Browser beim nächsten Besuch wiederzuerkennen (persistente Cookies). Die Dauer der Speicherung können Sie der Übersicht in den Cookie-Einstellungen Ihres Webbrowsers entnehmen. Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und einzeln über deren Annahme entscheiden oder die Annahme von Cookies für bestimmte Fälle oder generell ausschließen. Jeder Browser unterscheidet sich in der Art, wie er die Cookie-Einstellungen verwaltet. Diese ist in dem Hilfemenü jedes Browsers beschrieben, welches Ihnen erläutert, wie Sie Ihre Cookie-Einstellungen ändern können. Diese finden Sie für die jeweiligen Browser unter den folgenden Links:</p>
             <p>Internet Explorer™:
@@ -142,17 +144,14 @@ readingTime: ca. 8 Minuten
             </ul>
             <p>Bei Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten, bei Auskünften, Berichtigung, Sperrung oder Löschung von Daten sowie Widerruf erteilter Einwilligungen oder Widerspruch gegen eine bestimmte Datenverwendung wenden Sie sich bitte direkt an uns über die Kontaktdaten in unserem Impressum.</p>
             <p>&nbsp;</p>
-            <div style="border: 3px solid black; padding: 2em;">
-                <p>
-                    <span style="color: #ba0200;">********************************************************************</span>
-                    <br><span class="font-bold">Widerspruchsrecht</span><br>Soweit wir zur Wahrung unserer im Rahmen einer Interessensabwägung überwiegenden berechtigten Interessen personenbezogene Daten wie oben erläutert verarbeiten, können Sie dieser Verarbeitung mit Wirkung für die Zukunft widersprechen. Erfolgt die Verarbeitung zu Zwecken des Direktmarketings, können Sie dieses Recht jederzeit wie oben beschrieben ausüben. Soweit die Verarbeitung zu anderen Zwecken erfolgt, steht Ihnen ein Widerspruchsrecht nur bei Vorliegen von Gründen, die sich aus Ihrer besonderen Situation ergeben, zu.
+            <div class="border rounded border-2 border-main-800 p-4">
+                <p><span class="font-bold">Widerspruchsrecht</span><br>Soweit wir zur Wahrung unserer im Rahmen einer Interessensabwägung überwiegenden berechtigten Interessen personenbezogene Daten wie oben erläutert verarbeiten, können Sie dieser Verarbeitung mit Wirkung für die Zukunft widersprechen. Erfolgt die Verarbeitung zu Zwecken des Direktmarketings, können Sie dieses Recht jederzeit wie oben beschrieben ausüben. Soweit die Verarbeitung zu anderen Zwecken erfolgt, steht Ihnen ein Widerspruchsrecht nur bei Vorliegen von Gründen, die sich aus Ihrer besonderen Situation ergeben, zu.
                 </p>
                 <p>Nach Ausübung Ihres Widerspruchsrechts werden wir Ihre personenbezogenen Daten nicht weiter zu diesen Zwecken verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder wenn die Verarbeitung der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen dient.</p>
                 <p>Dies gilt nicht, wenn die Verarbeitung zu Zwecken des Direktmarketings erfolgt. Dann werden wir Ihre personenbezogenen Daten nicht weiter zu diesem Zweck verarbeiten.<br>
-                    <span style="color: #ba0200;">********************************************************************</span>
                 </p>
             </div>
         </div>
     </div>
-
+    </section>
 @endsection

@@ -15,8 +15,8 @@ return [
         'children' => [
             'Webserver' => 'docs/1.7/installation-webserver',
             'Conatiner' => 'docs/1.7/installation-container',
-            'Konsole'   => 'docs/1.7/installation-console',
-            'Browser'   => 'docs/1.7/installation-webui',
+            'Terminal'   => 'docs/1.7/installation-terminal',
+            'Browser'   => 'docs/1.7/installation-browser',
         ]
     ],
     'System'       => [
@@ -24,7 +24,7 @@ return [
         'children' => [
             'Einstellungen'    => 'docs/1.7/system-admin',
             'Benutzer'         => 'docs/1.7/system-users',
-            'testware Skripte' => 'docs/1.7/system-scripts',
+            'testware Konsole' => 'docs/1.7/system-console',
             'Lokalisierung'    => 'docs/1.7/system-locales',
         ]
     ],

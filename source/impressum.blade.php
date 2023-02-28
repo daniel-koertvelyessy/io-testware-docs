@@ -6,11 +6,12 @@ readingtime: < 1 min
 @extends('_layouts.main')
 
 @section('body')
-
+    <section class="container max-w-6xl mx-auto px-6 py-10 md:py-12">
     <h1 class="sm:text-4xl text-5xl">Impressum</h1>
 
     <section class="grid grid-cols-1 sm:grid-cols-4 gap-4">
         <article class="sm:col-span-3">
+            <p>testWare wird entwickelt und vetrieben von:</p>
             <p class="text-3xl">thermo-control Körtvélyessy GmbH</p>
             <p>Grünspechtweg 19<br> 13469 Berlin<br> Deutschland</p>
             <p>Telefon: +49.30.40586940</p>
@@ -21,13 +22,13 @@ readingtime: < 1 min
             <p>Umsatzsteuer-Identifikationsnummer: DE 120051020</p>
         </article>
         <figure class="sm:col-span-1 hidden sm:flex">
-            <img src="assets/img/logo_thermo-control.svg"
-                 class="h-52"
+            <img src="/assets/img/docs_logo_1.7.svg"
+                 class="h-60"
                  alt="Logo thermo-control Körtvélyessy GmbH"
             >
         </figure>
     </section>
-    <section class="p-6 border border-slate-100 rounded-xl">
+    <section class="p-6 border border-slate-800 rounded-xl shadow-sm">
         <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie hier finden
             <a href="http://ec.europa.eu/consumers/odr/"
                target="_blank"
@@ -45,5 +46,5 @@ readingtime: < 1 min
            .
         </p>
     </section>
-
+    </section>
 @endsection

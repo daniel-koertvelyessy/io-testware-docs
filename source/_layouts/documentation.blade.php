@@ -29,7 +29,7 @@
             >
                 @include('_nav.menu', ['items' => $page->navigation])
             </nav>
-            <div class="DocSearch-content w-full lg:w-3/5 break-words pb-16 lg:pl-4"
+            <div class="DocSearch-content w-full break-words pb-16 lg:pr-52 xl:pr-28 lg:pl-4"
                  v-pre
             >
                 @yield('content')

@@ -40,7 +40,7 @@ readingtime: < 1 min
                 >Installation</h3>
 
                 <p>Die Installation besteht aus zwei Schritten. Als erstes muss die Infrastruktur aus Web- und Datenbankserver aufgestellt werden. Die Instanz kann dann über ...</p>
-                <a href="/docs/installation-main/"
+                <a href="/docs/1.7/installation-main/"
                    class="button-main"
                 >mehr
                 </a>
@@ -53,7 +53,7 @@ readingtime: < 1 min
                 >Verwaltung</h3>
 
                 <p>Ist die Installation abgeschlossen, gilt es die Umgebung der testWare zu gestalten. Das bedeutet, der / die Standorte, Gebäude. Produkte etc. müssen definiert ...</p>
-                <a href="/docs/verwaltung-main/"
+                <a href="/docs/1.7/backend-main/"
                    class="button-main"
                 >mehr
                 </a>
@@ -65,7 +65,7 @@ readingtime: < 1 min
                 >REST API</h3>
 
                 <p>Von Hause aus ist die testWare mit einer mächtigen REST-full API ausgestatt, über deren Endpunkte viele Operationen automatisiert erfolgen ...</p>
-                <a href="/docs/api-main/"
+                <a href="/docs/1.7/api-main/"
                    class="button-main"
                 >mehr
                 </a>

@@ -5,12 +5,8 @@
             <div class="ml-2 h-3 w-3 bg-orange-300 rounded-full"></div>
             <div class="ml-2 h-3 w-3 bg-green-500 rounded-full"></div>
         </div>
-        <div class="mt-4 flex items-start">
-            <span class="text-green-400">computer:{{ $path??'~' }}$</span>
-            <span class="flex-1  pl-2">
-                {{ $slot }}
-                <br>
-            </span>
+        <div class="mt-4 flex flex-col items-start">
+            {{ $slot }}
         </div>
     </div>
 </div>

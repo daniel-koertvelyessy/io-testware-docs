@@ -6,10 +6,6 @@ reading-time: ~ 10min
 @php
 
     $navigation = [
-        [
-            'link' => 'api-location-header',
-            'header' => 'Standorte'
-],
                 [
                     'link' => 'locations',
                     'header' => 'Betriebe'
