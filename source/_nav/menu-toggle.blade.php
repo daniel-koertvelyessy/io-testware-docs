@@ -21,6 +21,8 @@
 
 
 <button class="flex justify-center items-center h-10 lg:hidden focus:outline-none mr-4 px-5"
+        role="button"
+        aria-label="Toggle mobile navigation"
         x-on:click="showResonsiveMenu = !showResonsiveMenu"
 >
     <x-toggle class="h-10 text-main-500 hover:text-main-200"/>
